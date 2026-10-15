@@ -1,0 +1,8 @@
+{"id": "hold01", "question": "What is the latest version of FastAPI?", "answers": ["0.143.1"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "hold02", "question": "What is the latest version of TypeScript on npm?", "answers": ["7.0.2"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "hold03", "question": "What is the latest Ubuntu LTS version?", "answers": ["26.04", "26.04.1"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "hold04", "question": "What is the latest release version of Ollama?", "answers": ["0.40.4"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "hold05", "question": "What is the USPTO's general phone number?", "answers": ["800-786-9199"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "hold06", "question": "Who is the CEO of Nike?", "answers": ["Elliott Hill"], "type": "name", "truth_checked": "2026-10-15"}
+{"id": "hold07", "question": "What is the latest version of NumPy?", "answers": ["2.5.4"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "hold08", "question": "What is the latest release of vLLM?", "answers": ["0.31.0"], "type": "version", "truth_checked": "2026-10-15"}

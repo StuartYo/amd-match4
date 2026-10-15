@@ -1,0 +1,16 @@
+{"id": "dev01", "question": "What is the latest version of the Python package requests on PyPI?", "answers": ["2.34.2"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev02", "question": "What is the latest LTS version of Node.js?", "answers": ["24.22.0"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev03", "question": "What is the latest version of the express package on npm?", "answers": ["5.3.0"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev04", "question": "What is the latest stable release of Kubernetes?", "answers": ["1.37.1"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev05", "question": "What is the latest stable version of the Rust programming language?", "answers": ["1.99.0"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev06", "question": "What phone number should I call in the US for Delta Air Lines reservations?", "answers": ["800-221-1212"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "dev07", "question": "What is the IRS phone number for individual tax questions?", "answers": ["800-829-1040"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "dev08", "question": "What is the phone number of the National Air and Space Museum in Washington, DC?", "answers": ["202-633-2214"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "dev09", "question": "What is the USPS customer service phone number?", "answers": ["800-275-8777"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "dev10", "question": "What is the general information phone number for Grand Canyon National Park?", "answers": ["928-638-7888"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "dev11", "question": "Who is the current CEO of Starbucks?", "answers": ["Brian Niccol"], "type": "name", "truth_checked": "2026-10-15"}
+{"id": "dev12", "question": "Who is the current CEO of Boeing?", "answers": ["Kelly Ortberg", "Robert Ortberg", "Robert K. Ortberg"], "type": "name", "truth_checked": "2026-10-15"}
+{"id": "dev13", "question": "How many points is Match 4 of the AMD AI League on lablab.ai worth?", "answers": ["1800", "1,800"], "type": "number", "truth_checked": "2026-10-15"}
+{"id": "dev14", "question": "What is the latest release version of PostgreSQL?", "answers": ["18.6"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev15", "question": "What is the latest stable version of Python?", "answers": ["3.15.0"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "dev16", "question": "What is the FDA's general phone number for consumer inquiries?", "answers": ["888-463-6332", "1-888-INFO-FDA"], "type": "phone", "truth_checked": "2026-10-15"}

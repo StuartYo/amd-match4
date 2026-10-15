@@ -1,0 +1,1332 @@
+{
+ "set": "dev",
+ "summary": {
+  "agent": {
+   "n": 16,
+   "strict": 4,
+   "lenient": 4,
+   "mean_s": 7.8,
+   "max_s": 27.0,
+   "tokens": 9441
+  },
+  "baseline": {
+   "n": 16,
+   "strict": 0,
+   "lenient": 0,
+   "mean_s": 0.3,
+   "max_s": 0.7,
+   "tokens": 874
+  }
+ },
+ "rows": [
+  {
+   "mode": "agent",
+   "id": "dev01",
+   "pred": "2.34.2",
+   "answers": [
+    "2.34.2"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 20.4,
+   "confidence": 0.8519528019683106,
+   "sources": [
+    "https://pypi.org/project/requests/"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 173,
+    "completion_tokens": 87,
+    "seconds": 4.3
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @19.6s",
+     "fetched 0/0 @20.4s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "requests",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "requests",
+     "queries": [
+      "What is the latest version of the Python package requests on PyPI?",
+      "What is the latest version of the requests package on PyPI?",
+      "What is the current version of the requests library on PyPI?"
+     ]
+    },
+    "top": [
+     [
+      "2.34.2",
+      3.0,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 20.42
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev02",
+   "pred": "4.00",
+   "answers": [
+    "24.22.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 7.0,
+   "confidence": 0.725119497789823,
+   "sources": [
+    "https://current.com/",
+    "https://current.com/phil50/?utm_source=inf&utm_campaign=phil50"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 169,
+    "completion_tokens": 82,
+    "seconds": 3.64
+   },
+   "trace": {
+    "steps": [
+     "search 16 hits @4.1s",
+     "fetched 4/6 @7.0s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Node.js",
+     "attribute": "Latest LTS version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "",
+     "queries": [
+      "What is the latest LTS version of Node.js?",
+      "What is the latest LTS version of Node.js?",
+      "What is the current Long Term Support version of Node.js?"
+     ]
+    },
+    "top": [
+     [
+      "4.00",
+      5.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "0.01",
+      4.2,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "2.50",
+      3.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "0.50",
+      3.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "3.50",
+      3.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ]
+    ],
+    "seconds": 7.01
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev03",
+   "pred": "4.00",
+   "answers": [
+    "5.3.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 6.1,
+   "confidence": 0.8765329524347761,
+   "sources": [
+    "https://current.com/",
+    "https://current.com/phil50/?utm_source=inf&utm_campaign=phil50",
+    "https://play.google.com/store/apps/details?id=com.current.app&hl=en-US"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 171,
+    "completion_tokens": 84,
+    "seconds": 3.86
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @4.3s",
+     "fetched 3/6 @6.1s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "express",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "express",
+     "queries": [
+      "What is the latest version of the express package on npm?",
+      "What is the latest version of the express package on npm?",
+      "What is the current version of the express package on npm?"
+     ]
+    },
+    "top": [
+     [
+      "4.00",
+      7.2,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "0.01",
+      5.6,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "5.3.0",
+      4.5,
+      "api",
+      []
+     ],
+     [
+      "2.50",
+      4.0,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "0.25",
+      3.6,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ]
+    ],
+    "seconds": 6.09
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev04",
+   "pred": "4.00",
+   "answers": [
+    "1.37.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 5.2,
+   "confidence": 0.8765329524347761,
+   "sources": [
+    "https://current.com/",
+    "https://current.com/phil50/?utm_source=inf&utm_campaign=phil50",
+    "https://play.google.com/store/apps/details?id=com.current.app&hl=en-US"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 168,
+    "completion_tokens": 77,
+    "seconds": 3.61
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @4.0s",
+     "fetched 3/6 @5.2s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Kubernetes",
+     "attribute": "latest stable release",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest stable release of Kubernetes?",
+      "What is the latest stable release of Kubernetes?",
+      "What is the current version of Kubernetes?"
+     ]
+    },
+    "top": [
+     [
+      "4.00",
+      7.2,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "0.01",
+      5.6,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "2.50",
+      4.0,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "0.25",
+      3.6,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ],
+     [
+      "0.00",
+      3.6,
+      "regex",
+      [
+       "current.com",
+       "google.com"
+      ]
+     ]
+    ],
+    "seconds": 5.23
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev05",
+   "pred": "1.99.0",
+   "answers": [
+    "1.99.0"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 4.8,
+   "confidence": 0.8519528019683106,
+   "sources": [
+    "https://endoflife.date/rust"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 171,
+    "completion_tokens": 78,
+    "seconds": 3.6
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @4.2s",
+     "fetched 0/0 @4.8s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Rust",
+     "attribute": "latest stable version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest stable version of the Rust programming language?",
+      "What is the latest stable version of Rust?",
+      "What is the current stable version of Rust?"
+     ]
+    },
+    "top": [
+     [
+      "1.99.0",
+      3.0,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 4.8
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev06",
+   "pred": "800-221-1212",
+   "answers": [
+    "800-221-1212"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 27.0,
+   "confidence": 0.97,
+   "sources": [
+    "https://www.delta.com/us/en/need-help/overview?os=wtmbZEgMu5Hw&ref=app",
+    "https://www.airwise.com/airlines/info/delta",
+    "https://www.seatmaestro.com/airlines-seating-maps/delta-air-lines/overview/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 3096,
+    "completion_tokens": 110,
+    "seconds": 21.21
+   },
+   "trace": {
+    "steps": [
+     "search 12 hits @4.4s",
+     "fetched 6/6 @7.6s",
+     "followed 3 @9.4s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Delta Air Lines",
+     "attribute": "reservation phone number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What phone number should I call in the US for Delta Air Lines reservations?",
+      "What is the customer service phone number for Delta Air Lines?",
+      "What is the reservation number for Delta Air Lines in the US?"
+     ]
+    },
+    "llm_answer": "800-221-1212",
+    "top": [
+     [
+      "800-221-1212",
+      11.25,
+      "llm",
+      [
+       "airwise.com",
+       "delta.com",
+       "seatmaestro.com",
+       "snippets"
+      ]
+     ],
+     [
+      "800-800-1504",
+      6.12,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "877-832-5211",
+      5.8,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-352-2746",
+      5.62,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-511-9629",
+      4.9,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ]
+    ],
+    "seconds": 27.03
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev07",
+   "pred": "",
+   "answers": [
+    "800-829-1040"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 4.2,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 170,
+    "completion_tokens": 84,
+    "seconds": 3.8
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @4.2s",
+     "fetched 0/0 @4.2s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "IRS",
+     "attribute": "phone number for individual tax questions",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the IRS phone number for individual tax questions?",
+      "What is the IRS phone number for individual tax questions?",
+      "What is the IRS contact number for personal tax inquiries?"
+     ]
+    },
+    "top": [],
+    "seconds": 4.23
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev08",
+   "pred": "1566-2566",
+   "answers": [
+    "202-633-2214"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 6.3,
+   "confidence": 0.2261814257305462,
+   "sources": [
+    "https://global.ibk.co.kr/id/investor/AnnualReport"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 176,
+    "completion_tokens": 93,
+    "seconds": 4.23
+   },
+   "trace": {
+    "steps": [
+     "search 6 hits @4.7s",
+     "fetched 2/6 @6.3s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "National Air and Space Museum",
+     "attribute": "phone number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the phone number of the National Air and Space Museum in Washington, DC?",
+      "What is the phone number of the National Air and Space Museum in Washington, DC?",
+      "Phone number of the National Air and Space Museum in Washington, DC?"
+     ]
+    },
+    "top": [
+     [
+      "1566-2566",
+      2.2,
+      "regex",
+      [
+       "ibk.co.kr"
+      ]
+     ],
+     [
+      "1588-2588",
+      2.2,
+      "regex",
+      [
+       "ibk.co.kr"
+      ]
+     ],
+     [
+      "82-31-888-8000",
+      2.2,
+      "regex",
+      [
+       "ibk.co.kr"
+      ]
+     ]
+    ],
+    "seconds": 6.3
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev09",
+   "pred": "",
+   "answers": [
+    "800-275-8777"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 4.1,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 168,
+    "completion_tokens": 81,
+    "seconds": 3.73
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @4.1s",
+     "fetched 0/0 @4.1s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "USPS",
+     "attribute": "customer service phone number",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the USPS customer service phone number?",
+      "What is the USPS customer service phone number?",
+      "USPS customer service number 2023"
+     ]
+    },
+    "top": [],
+    "seconds": 4.13
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev10",
+   "pred": "",
+   "answers": [
+    "928-638-7888"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 6.8,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 1940,
+    "completion_tokens": 100,
+    "seconds": 5.19
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @4.3s",
+     "fetched 2/6 @5.5s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Grand Canyon National Park",
+     "attribute": "General Information Phone Number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the general information phone number for Grand Canyon National Park?",
+      "What is the phone number for Grand Canyon National Park?",
+      "What is the general information phone number for Grand Canyon National Park?"
+     ]
+    },
+    "llm_answer": "general",
+    "top": [],
+    "seconds": 6.83
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev11",
+   "pred": "Brian Niccol",
+   "answers": [
+    "Brian Niccol"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 6.9,
+   "confidence": 0.75,
+   "sources": [],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 805,
+    "completion_tokens": 89,
+    "seconds": 4.35
+   },
+   "trace": {
+    "steps": [
+     "search 15 hits @3.6s",
+     "fetched 1/6 @5.7s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Starbucks",
+     "attribute": "CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the current CEO of Starbucks?",
+      "Who is the current CEO of Starbucks?",
+      "What is the current CEO of Starbucks?"
+     ]
+    },
+    "llm_answer": "Brian Niccol",
+    "top": [
+     [
+      "Brian Niccol",
+      2.8,
+      "llm",
+      [
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 6.95
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev12",
+   "pred": "",
+   "answers": [
+    "Kelly Ortberg",
+    "Robert Ortberg",
+    "Robert K. Ortberg"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 4.9,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 167,
+    "completion_tokens": 75,
+    "seconds": 3.26
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @3.7s",
+     "fetched 3/6 @4.9s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Boeing",
+     "attribute": "current CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the current CEO of Boeing?",
+      "Who is the current CEO of Boeing?",
+      "What is the current CEO of Boeing?"
+     ]
+    },
+    "top": [],
+    "seconds": 4.95
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev13",
+   "pred": "",
+   "answers": [
+    "1800",
+    "1,800"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 5.1,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 177,
+    "completion_tokens": 102,
+    "seconds": 4.46
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @5.1s",
+     "fetched 0/0 @5.1s"
+    ],
+    "plan": {
+     "answer_type": "number",
+     "entity": "Match 4 of the AMD AI League",
+     "attribute": "Points worth",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "How many points is Match 4 of the AMD AI League on lablab.ai worth?",
+      "How many points does Match 4 of the AMD AI League on lablab.ai worth?",
+      "What is the point value of Match 4 in the AMD AI League on lablab.ai?"
+     ]
+    },
+    "top": [],
+    "seconds": 5.08
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev14",
+   "pred": "4.00",
+   "answers": [
+    "18.6"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 6.1,
+   "confidence": 0.6058736684317604,
+   "sources": [
+    "https://current.com/",
+    "https://current.com/phil50/?utm_source=inf&utm_campaign=phil50"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 168,
+    "completion_tokens": 77,
+    "seconds": 3.33
+   },
+   "trace": {
+    "steps": [
+     "search 16 hits @3.9s",
+     "fetched 5/6 @6.1s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "PostgreSQL",
+     "attribute": "latest release version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest release version of PostgreSQL?",
+      "What is the latest version of PostgreSQL?",
+      "What is the current release version of PostgreSQL?"
+     ]
+    },
+    "top": [
+     [
+      "4.00",
+      5.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "0.01",
+      4.8,
+      "regex",
+      [
+       "current.com",
+       "kokoquest.com"
+      ]
+     ],
+     [
+      "0.2",
+      4.6,
+      "regex",
+      [
+       "current.com",
+       "kokoquest.com",
+       "usalternators.com"
+      ]
+     ],
+     [
+      "3.0",
+      4.2,
+      "regex",
+      [
+       "current.com",
+       "kokoquest.com",
+       "usalternators.com"
+      ]
+     ],
+     [
+      "2.50",
+      4.0,
+      "regex",
+      [
+       "current.com",
+       "usalternators.com"
+      ]
+     ]
+    ],
+    "seconds": 6.14
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev15",
+   "pred": "4.00",
+   "answers": [
+    "3.15.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 5.4,
+   "confidence": 0.725119497789823,
+   "sources": [
+    "https://current.com/",
+    "https://current.com/phil50/?utm_source=inf&utm_campaign=phil50"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 168,
+    "completion_tokens": 78,
+    "seconds": 3.38
+   },
+   "trace": {
+    "steps": [
+     "search 16 hits @3.8s",
+     "fetched 3/6 @5.4s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Python",
+     "attribute": "latest stable version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "",
+     "queries": [
+      "What is the latest stable version of Python?",
+      "What is the latest stable version of Python?",
+      "What is the current stable version of Python?"
+     ]
+    },
+    "top": [
+     [
+      "4.00",
+      5.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "0.01",
+      4.2,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "2.50",
+      3.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "0.50",
+      3.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ],
+     [
+      "3.50",
+      3.4,
+      "regex",
+      [
+       "current.com"
+      ]
+     ]
+    ],
+    "seconds": 5.41
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev16",
+   "pred": "",
+   "answers": [
+    "888-463-6332",
+    "1-888-INFO-FDA"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 4.2,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 171,
+    "completion_tokens": 86,
+    "seconds": 3.83
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @4.2s",
+     "fetched 0/0 @4.2s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "FDA",
+     "attribute": "General Phone Number for Consumer Inquiries",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the FDA's general phone number for consumer inquiries?",
+      "What is the FDA's general phone number for consumer inquiries?",
+      "FDA consumer inquiries phone number 2025"
+     ]
+    },
+    "top": [],
+    "seconds": 4.24
+   }
+  },
+  {
+   "mode": "baseline",
+   "id": "dev01",
+   "pred": "3.1.0",
+   "answers": [
+    "2.34.2"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 49,
+    "completion_tokens": 6,
+    "seconds": 0.25
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev02",
+   "pred": "18.14",
+   "answers": [
+    "24.22.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 45,
+    "completion_tokens": 6,
+    "seconds": 0.25
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev03",
+   "pred": "11.0.0",
+   "answers": [
+    "5.3.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 47,
+    "completion_tokens": 7,
+    "seconds": 0.28
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev04",
+   "pred": "1.18.9",
+   "answers": [
+    "1.37.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 7,
+    "seconds": 0.31
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev05",
+   "pred": "1.7.0",
+   "answers": [
+    "1.99.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 47,
+    "completion_tokens": 6,
+    "seconds": 0.29
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev06",
+   "pred": "800-221-2212",
+   "answers": [
+    "800-221-1212"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.6,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 50,
+    "completion_tokens": 15,
+    "seconds": 0.64
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev07",
+   "pred": "800-829-3629",
+   "answers": [
+    "800-829-1040"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.7,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 46,
+    "completion_tokens": 15,
+    "seconds": 0.65
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev08",
+   "pred": "202-358-2000",
+   "answers": [
+    "202-633-2214"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.6,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 52,
+    "completion_tokens": 13,
+    "seconds": 0.57
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev09",
+   "pred": "1-800-ASK-USPS",
+   "answers": [
+    "800-275-8777"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.4,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 10,
+    "seconds": 0.43
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev10",
+   "pred": "123-456-7890",
+   "answers": [
+    "928-638-7888"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.5,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 48,
+    "completion_tokens": 11,
+    "seconds": 0.45
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev11",
+   "pred": "Starbucks",
+   "answers": [
+    "Brian Niccol"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.1,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 43,
+    "completion_tokens": 3,
+    "seconds": 0.15
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev12",
+   "pred": "Jeff Bezos",
+   "answers": [
+    "Kelly Ortberg",
+    "Robert Ortberg",
+    "Robert K. Ortberg"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 43,
+    "completion_tokens": 4,
+    "seconds": 0.18
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev13",
+   "pred": "15",
+   "answers": [
+    "1800",
+    "1,800"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.1,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 53,
+    "completion_tokens": 3,
+    "seconds": 0.13
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev14",
+   "pred": "13.2",
+   "answers": [
+    "18.6"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 5,
+    "seconds": 0.22
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev15",
+   "pred": "3.11.0",
+   "answers": [
+    "3.15.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 7,
+    "seconds": 0.31
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "dev16",
+   "pred": "1-800-FDA-INFO",
+   "answers": [
+    "888-463-6332",
+    "1-888-INFO-FDA"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.4,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 47,
+    "completion_tokens": 10,
+    "seconds": 0.41
+   },
+   "trace": {}
+  }
+ ]
+}

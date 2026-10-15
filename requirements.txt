@@ -1,0 +1,8 @@
+transformers==5.14.1
+tokenizers
+safetensors
+huggingface_hub
+accelerate
+httpx
+beautifulsoup4
+lxml

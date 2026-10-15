@@ -1,0 +1,204 @@
+{
+ "set": "dev",
+ "summary": {
+  "agent": {
+   "n": 3,
+   "strict": 3,
+   "lenient": 3,
+   "mean_s": 20.3,
+   "max_s": 28.5,
+   "tokens": 4162
+  }
+ },
+ "rows": [
+  {
+   "mode": "agent",
+   "id": "dev02",
+   "pred": "24.22.0",
+   "answers": [
+    "24.22.0"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 26.2,
+   "confidence": 0.8519528019683106,
+   "sources": [
+    "https://endoflife.date/nodejs"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 169,
+    "completion_tokens": 82,
+    "seconds": 4.14
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @25.0s",
+     "fetched 0/0 @26.2s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Node.js",
+     "attribute": "Latest LTS version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "",
+     "queries": [
+      "What is the latest LTS version of Node.js?",
+      "What is the latest LTS version of Node.js?",
+      "What is the current Long Term Support version of Node.js?"
+     ]
+    },
+    "top": [
+     [
+      "24.22.0",
+      3.0,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 26.15
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev06",
+   "pred": "800-221-1212",
+   "answers": [
+    "800-221-1212"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 28.5,
+   "confidence": 0.97,
+   "sources": [
+    "https://www.delta.com/us/en/need-help/overview?os=wtmbZEgMu5Hw&ref=app",
+    "https://www.airwise.com/airlines/info/delta",
+    "https://www.seatmaestro.com/airlines-seating-maps/delta-air-lines/overview/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 3091,
+    "completion_tokens": 110,
+    "seconds": 22.42
+   },
+   "trace": {
+    "steps": [
+     "search 20 hits @4.8s",
+     "fetched 6/6 @8.2s",
+     "followed 3 @9.4s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Delta Air Lines",
+     "attribute": "reservation phone number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What phone number should I call in the US for Delta Air Lines reservations?",
+      "What is the customer service phone number for Delta Air Lines?",
+      "What is the reservation number for Delta Air Lines in the US?"
+     ]
+    },
+    "llm_answer": "800-221-1212",
+    "top": [
+     [
+      "800-221-1212",
+      11.25,
+      "llm",
+      [
+       "airwise.com",
+       "delta.com",
+       "seatmaestro.com",
+       "snippets"
+      ]
+     ],
+     [
+      "800-800-1504",
+      6.12,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "877-832-5211",
+      5.8,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-352-2746",
+      5.62,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-511-9629",
+      4.9,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ]
+    ],
+    "seconds": 28.49
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev11",
+   "pred": "Brian Niccol",
+   "answers": [
+    "Brian Niccol"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 6.1,
+   "confidence": 0.75,
+   "sources": [],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 621,
+    "completion_tokens": 89,
+    "seconds": 3.84
+   },
+   "trace": {
+    "steps": [
+     "search 17 hits @4.4s",
+     "fetched 2/6 @5.2s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Starbucks",
+     "attribute": "CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the current CEO of Starbucks?",
+      "Who is the current CEO of Starbucks?",
+      "What is the current CEO of Starbucks?"
+     ]
+    },
+    "llm_answer": "Brian Niccol",
+    "top": [
+     [
+      "Brian Niccol",
+      2.8,
+      "llm",
+      [
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 6.11
+   }
+  }
+ ]
+}
