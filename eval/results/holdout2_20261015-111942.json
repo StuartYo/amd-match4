@@ -1,0 +1,858 @@
+{
+ "set": "holdout2",
+ "summary": {
+  "agent": {
+   "n": 8,
+   "strict": 6,
+   "lenient": 6,
+   "mean_s": 13.6,
+   "max_s": 27.4,
+   "tokens": 15104
+  },
+  "baseline": {
+   "n": 8,
+   "strict": 0,
+   "lenient": 0,
+   "mean_s": 0.3,
+   "max_s": 0.6,
+   "tokens": 423
+  }
+ },
+ "rows": [
+  {
+   "mode": "agent",
+   "id": "h2_01",
+   "pred": "3.0.6",
+   "answers": [
+    "3.0.6"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 27.4,
+   "confidence": 0.97,
+   "sources": [
+    "https://pypi.org/project/pandas/"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 167,
+    "completion_tokens": 82,
+    "seconds": 3.96
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @25.1s",
+     "fetched 0/0 @27.4s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "pandas",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "pandas",
+     "queries": [
+      "What is the latest version of pandas?",
+      "What is the latest version of pandas on PyPI?",
+      "What is the current version of pandas?"
+     ]
+    },
+    "wikidata": null,
+    "pages": [],
+    "top": [
+     [
+      "3.0.6",
+      7.3,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 27.36
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_02",
+   "pred": "19.3.1",
+   "answers": [
+    "19.3.1"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 10.2,
+   "confidence": 0.97,
+   "sources": [
+    "https://endoflife.date/react"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 794,
+    "completion_tokens": 97,
+    "seconds": 4.89
+   },
+   "trace": {
+    "steps": [
+     "search 6 hits @6.6s",
+     "fetched 0/6 @9.0s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "React",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "",
+     "queries": [
+      "What is the latest version of React on npm?",
+      "What is the latest version of React on npm?",
+      "What is the current version of React available on npm?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q19399674",
+     "label": "React",
+     "description": "JavaScript library for building user interfaces",
+     "website": "https://react.dev/"
+    },
+    "pages": [],
+    "llm_answer": "19.3.0",
+    "top": [
+     [
+      "19.3.1",
+      7.3,
+      "api",
+      []
+     ],
+     [
+      "19.3.0",
+      2.8,
+      "llm",
+      [
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 10.22
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_03",
+   "pred": "1.27.2",
+   "answers": [
+    "1.27.2"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 12.4,
+   "confidence": 0.8481288363433407,
+   "sources": [
+    "https://endoflife.date/go"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 817,
+    "completion_tokens": 92,
+    "seconds": 4.85
+   },
+   "trace": {
+    "steps": [
+     "search 2 hits @6.5s",
+     "fetched 1/2 @10.9s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Go",
+     "attribute": "latest stable version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest stable version of Go?",
+      "What is the latest stable version of Go?",
+      "What is the current stable version of Go?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q41587",
+     "label": "Goiás",
+     "description": "state in the Central-West Region of Brazil",
+     "website": "http://www.goias.gov.br/"
+    },
+    "pages": [
+     "https://www.tp-link.com/cz/document/113336/"
+    ],
+    "llm_answer": "3.8",
+    "top": [
+     [
+      "1.27.2",
+      6.0,
+      "api",
+      []
+     ],
+     [
+      "3.8",
+      4.2,
+      "llm",
+      [
+       "snippets",
+       "tp-link.com"
+      ]
+     ],
+     [
+      "1.2.1",
+      3.1,
+      "api-guess",
+      [
+       "tp-link.com"
+      ]
+     ],
+     [
+      "3.0.1",
+      2.5,
+      "api-guess",
+      []
+     ]
+    ],
+    "seconds": 12.37
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_04",
+   "pred": "26.1",
+   "answers": [
+    "5.6.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 13.9,
+   "confidence": 0.8100909978424466,
+   "sources": [
+    "https://docs.docker.com/compose",
+    "https://github.com/AmanVarshney01/create-better-t-stack/pull/858",
+    "https://docs.docker.com/agentic-platform/release-notes/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2550,
+    "completion_tokens": 101,
+    "seconds": 6.0
+   },
+   "trace": {
+    "steps": [
+     "search 10 hits @6.1s",
+     "fetched 4/6 @10.9s",
+     "followed 3 @11.4s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Docker Compose",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "github",
+     "package": "",
+     "queries": [
+      "What is the latest release of Docker Compose?",
+      "What is the latest version of Docker Compose?",
+      "What is the current version of Docker Compose on GitHub?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q66317867",
+     "label": "Docker Compose",
+     "description": "software",
+     "website": "https://www.docker.com/"
+    },
+    "pages": [
+     "https://docs.docker.com/compose",
+     "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-docker-compose",
+     "https://deploywithdockercompose.com/",
+     "https://github.com/AmanVarshney01/create-better-t-stack/pull/858",
+     "https://docs.docker.com/agentic-platform/release-notes/",
+     "https://docs.docker.com/ai/sandboxes/release-notes/"
+    ],
+    "llm_answer": "0.46.0",
+    "top": [
+     [
+      "26.1",
+      6.79,
+      "regex",
+      [
+       "docker.com",
+       "github.com"
+      ]
+     ],
+     [
+      "0.47.0",
+      5.6,
+      "regex",
+      [
+       "docker.com"
+      ]
+     ],
+     [
+      "26.0",
+      5.39,
+      "regex",
+      [
+       "docker.com"
+      ]
+     ],
+     [
+      "0.46.0",
+      5.3,
+      "llm",
+      [
+       "docker.com"
+      ]
+     ],
+     [
+      "17.04",
+      5.04,
+      "regex",
+      [
+       "docker.com"
+      ]
+     ]
+    ],
+    "seconds": 13.91
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_05",
+   "pred": "0.13.1",
+   "answers": [
+    "0.13.1"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 12.1,
+   "confidence": 0.97,
+   "sources": [
+    "https://pypi.org/project/uv/",
+    "https://github.com/astral-sh/uv/blob/main/uv.schema.json"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2612,
+    "completion_tokens": 100,
+    "seconds": 6.01
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @6.0s",
+     "fetched 6/6 @9.5s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "uv",
+     "attribute": "latest release version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "uv",
+     "queries": [
+      "What is the latest release of the uv Python package manager?",
+      "What is the latest version of uv on PyPI?",
+      "What is the current latest release of uv?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q71798788",
+     "label": "ultraviolet source",
+     "description": "astronomical object that produces ultraviolet light",
+     "website": ""
+    },
+    "pages": [
+     "https://pypi.org/project/uv/",
+     "https://docs.astral.sh/uv/concepts/python-versions/",
+     "https://pydevtools.com/handbook/reference/uv/",
+     "https://github.com/astral-sh/uv/blob/main/uv.schema.json",
+     "https://www.speakeasy.com/blog/release-uv-python",
+     "https://hynek.me/articles/docker-uv/"
+    ],
+    "llm_answer": "0.13.1",
+    "top": [
+     [
+      "0.13.1",
+      9.49,
+      "api+llm",
+      [
+       "github.com",
+       "pypi.org"
+      ]
+     ],
+     [
+      "3.12.12",
+      5.64,
+      "regex",
+      [
+       "pypi.org"
+      ]
+     ],
+     [
+      "3.12.0",
+      5.14,
+      "regex",
+      [
+       "astral.sh",
+       "pypi.org"
+      ]
+     ],
+     [
+      "3.8.16",
+      4.85,
+      "regex",
+      [
+       "pypi.org"
+      ]
+     ],
+     [
+      "3.12.8",
+      4.64,
+      "regex",
+      [
+       "astral.sh"
+      ]
+     ]
+    ],
+    "seconds": 12.08
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_06",
+   "pred": "877-444-6777",
+   "answers": [
+    "209-372-0200"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 11.6,
+   "confidence": 0.3532006074420144,
+   "sources": [
+    "http://www.yosemitefun.com/Yosemite_National_Park_phone_numbers.htm"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2555,
+    "completion_tokens": 107,
+    "seconds": 6.26
+   },
+   "trace": {
+    "steps": [
+     "search 13 hits @7.0s",
+     "fetched 4/6 @8.2s",
+     "followed 3 @8.9s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Yosemite National Park",
+     "attribute": "General Questions Phone Number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the general questions phone number for Yosemite National Park?",
+      "What is the phone number for Yosemite National Park?",
+      "What is the contact number for Yosemite National Park?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q180402",
+     "label": "Yosemite National Park",
+     "description": "national park in California, United States",
+     "website": "https://nps.gov/yose"
+    },
+    "pages": [
+     "https://www.nps.gov/yose/index.htm",
+     "https://www.nps.gov/yose/contacts.htm",
+     "https://www.nps.gov/yose/index.htm",
+     "http://www.yosemitefun.com/Yosemite_National_Park_phone_numbers.htm",
+     "https://www.nps.gov/yose/learn/index.htm",
+     "https://www.nps.gov/aboutus/customer-service.htm",
+     "https://www.nps.gov/yose/getinvolved/workwithus.htm"
+    ],
+    "llm_answer": "209/372-0200",
+    "top": [
+     [
+      "877-444-6777",
+      3.6,
+      "regex",
+      [
+       "yosemitefun.com"
+      ]
+     ],
+     [
+      "559-252-4848",
+      3.45,
+      "regex",
+      [
+       "yosemitefun.com"
+      ]
+     ],
+     [
+      "518-885-3639",
+      3.25,
+      "regex",
+      [
+       "yosemitefun.com"
+      ]
+     ],
+     [
+      "372-8320",
+      2.9,
+      "regex",
+      [
+       "yosemitefun.com"
+      ]
+     ],
+     [
+      "372-0200",
+      2.75,
+      "regex",
+      [
+       "yosemitefun.com"
+      ]
+     ]
+    ],
+    "seconds": 11.64
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_07",
+   "pred": "435-772-3256",
+   "answers": [
+    "435-772-3256"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 11.3,
+   "confidence": 0.97,
+   "sources": [
+    "https://www.nps.gov/zion/planyourvisit/basicinfo.htm",
+    "https://www.nps.gov/zion/contacts.htm",
+    "https://www.nps.gov/zion/siteindex.htm"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2229,
+    "completion_tokens": 114,
+    "seconds": 6.08
+   },
+   "trace": {
+    "steps": [
+     "search 14 hits @6.3s",
+     "fetched 6/6 @7.9s",
+     "followed 3 @9.0s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Zion National Park",
+     "attribute": "phone number for recorded park information",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What phone number gives recorded park information for Zion National Park?",
+      "What is the phone number for Zion National Park's recorded park information?",
+      "What is the official phone number for Zion National Park?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q205325",
+     "label": "Zion National Park",
+     "description": "national park in Washington, Iron, and Kane counties in Utah, United States",
+     "website": "https://www.nps.gov/zion/index.htm"
+    },
+    "pages": [
+     "https://www.nps.gov/flni/learn/historyculture/phone-calls-and-seating-chart.htm",
+     "https://www.nps.gov/zion/planyourvisit/basicinfo.htm",
+     "https://www.nationalgeographic.com/travel/national-parks/article/zion-national-park",
+     "https://www.nps.gov/zion/contacts.htm",
+     "https://www.nps.gov/zion/siteindex.htm",
+     "https://www.nps.gov/zion/index.htm",
+     "https://www.nps.gov/flni/contacts.htm",
+     "https://www.nps.gov/aboutus/accessibility.htm",
+     "https://help.nationalgeographic.com/"
+    ],
+    "llm_answer": "435-772-3256",
+    "top": [
+     [
+      "435-772-3256",
+      8.69,
+      "regex+llm",
+      [
+       "nps.gov",
+       "snippets"
+      ]
+     ],
+     [
+      "814-893-6322",
+      5.39,
+      "regex",
+      [
+       "nps.gov"
+      ]
+     ],
+     [
+      "84767-1099",
+      4.95,
+      "regex",
+      [
+       "nps.gov"
+      ]
+     ],
+     [
+      "202-208-5693",
+      4.25,
+      "regex",
+      [
+       "nps.gov"
+      ]
+     ],
+     [
+      "20240-0036",
+      3.9,
+      "regex",
+      [
+       "nps.gov"
+      ]
+     ]
+    ],
+    "seconds": 11.35
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "h2_08",
+   "pred": "Sundar Pichai",
+   "answers": [
+    "Sundar Pichai"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 10.0,
+   "confidence": 0.97,
+   "sources": [
+    "https://www.businessinsider.com/google-ceo",
+    "https://www.cnet.com/tech/tech-industry/sundar-pichai-becomes-ceo-of-alphabet-googles-parent-company/",
+    "https://observer.com/2023/02/google-ceo-sundar-pichai-bard-chatbot/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2596,
+    "completion_tokens": 91,
+    "seconds": 5.57
+   },
+   "trace": {
+    "steps": [
+     "search 4 hits @6.2s",
+     "fetched 4/4 @7.6s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Google",
+     "attribute": "CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the CEO of Google?",
+      "Who is the current CEO of Google?",
+      "What is the current CEO of Google?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q95",
+     "label": "Google",
+     "description": "American multinational technology company, a subsidiary of Alphabet Inc.",
+     "website": "https://about.google/"
+    },
+    "pages": [
+     "https://www.businessinsider.com/google-ceo",
+     "https://www.cnet.com/tech/tech-industry/sundar-pichai-becomes-ceo-of-alphabet-googles-parent-company/",
+     "https://observer.com/2023/02/google-ceo-sundar-pichai-bard-chatbot/",
+     "https://fortune.com/2025/07/18/eric-schmidt-ai-natural-limit-electricity-chips-water-usage/"
+    ],
+    "llm_answer": "Sundar Pichai",
+    "top": [
+     [
+      "Sundar Pichai",
+      4.6,
+      "llm",
+      [
+       "businessinsider.com",
+       "cnet.com",
+       "observer.com",
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 10.03
+   }
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_01",
+   "pred": "1.8.0",
+   "answers": [
+    "3.0.6"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 43,
+    "completion_tokens": 6,
+    "seconds": 0.31
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_02",
+   "pred": "12.0.0",
+   "answers": [
+    "19.3.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 45,
+    "completion_tokens": 7,
+    "seconds": 0.28
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_03",
+   "pred": "1.16",
+   "answers": [
+    "1.27.2"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 5,
+    "seconds": 0.2
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_04",
+   "pred": "1.23.2",
+   "answers": [
+    "5.6.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 45,
+    "completion_tokens": 7,
+    "seconds": 0.29
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_05",
+   "pred": "2.1.0",
+   "answers": [
+    "0.13.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 47,
+    "completion_tokens": 6,
+    "seconds": 0.25
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_06",
+   "pred": "415-423-2222",
+   "answers": [
+    "209-372-0200"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.5,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 47,
+    "completion_tokens": 13,
+    "seconds": 0.53
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_07",
+   "pred": "801-925-3333",
+   "answers": [
+    "435-772-3256"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.6,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 47,
+    "completion_tokens": 15,
+    "seconds": 0.64
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "h2_08",
+   "pred": "Jeff Bezos",
+   "answers": [
+    "Sundar Pichai"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 42,
+    "completion_tokens": 4,
+    "seconds": 0.17
+   },
+   "trace": {}
+  }
+ ]
+}

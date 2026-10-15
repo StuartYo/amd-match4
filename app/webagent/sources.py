@@ -124,9 +124,14 @@ def github_canonical_repo(entity: str) -> str | None:
     data = get_json("https://api.github.com/search/repositories", {"q": f"{entity} in:name", "sort": "stars", "per_page": 5})
     if not isinstance(data, dict):
         return None
+    words = [w for w in _slug(entity).split("-") if w]
     for it in data.get("items", []):
         repo = it.get("name", "").lower().replace("-", "").replace("_", "")
-        if repo == name and it.get("stargazers_count", 0) >= 500:
+        owner = it.get("full_name", "").split("/")[0].lower().replace("-", "")
+        if it.get("stargazers_count", 0) < 500:
+            continue
+        # "Ollama" -> ollama/ollama; "Docker Compose" -> docker/compose
+        if repo == name or (len(words) >= 2 and repo == "".join(words[1:]) and owner == words[0]):
             return it["full_name"]
     return None
 
