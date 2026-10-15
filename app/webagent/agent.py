@@ -162,13 +162,13 @@ If the excerpts do not contain the answer, use an empty answer.
 Return ONLY JSON: {{"answer": "...", "source": <excerpt number>}}"""
 
 
-def llm_read(pages: list[web.Page], plan: dict, usage: Usage) -> Candidate | None:
+def llm_read(pages: list[web.Page], plan: dict, usage: Usage, max_time: float | None = None) -> Candidate | None:
     picked = rank_chunks(pages, plan, config.LLM_MAX_CONTEXT_CHARS)
     if not picked:
         return None
     ctx = "\n\n".join(f"[{k + 1}] ({web.domain_of(pages[i].url)})\n{c.strip()}" for k, (i, c) in enumerate(picked))
     reply = get_llm().chat([{"role": "user", "content": READ_PROMPT.format(q=plan["question"], t=plan["answer_type"], ctx=ctx)}],
-                           max_tokens=80, usage=usage)
+                           max_tokens=80, usage=usage, max_time=max_time)
     data = parse_json(reply) or {}
     ans = str(data.get("answer") or "").strip()
     if not ans:
@@ -209,7 +209,7 @@ def score_candidates(cands: list[Candidate], pages: list[web.Page], plan: dict) 
         if not val or len(val) > 200:
             continue
         key = extract.grade_norm(val) if t != "phone" else extract.phone_digits(val)[-10:]
-        base = {"api": 6.0 if latest_version else 3.0, "llm": 2.2, "tel": 1.6, "jsonld": 1.6, "regex": 0.8}.get(c.method, 0.5)
+        base = {"api": 6.0 if latest_version else 3.0, "api-guess": 2.5, "llm": 2.2, "tel": 1.6, "jsonld": 1.6, "regex": 0.8}.get(c.method, 0.5)
         ctx_overlap = len(qtok & set(tokens(c.context))) if c.method in ("regex", "tel") else 0
         s = base + 0.35 * min(ctx_overlap, 4)
         if t == "phone" and re.search(r"\bfax\b|\btty\b|\btdd\b", c.context.lower()) and "fax" not in plan["question"].lower():
@@ -297,6 +297,12 @@ def answer(question: str, budget_s: float | None = None) -> Result:
         wd = None
     pool.shutdown(wait=False, cancel_futures=True)
     homepage = (wd or {}).get("website", "")
+    if not homepage:
+        # No Wikidata answer: take the first search hit on a domain named after the entity.
+        for h in hits:
+            if entity_domain_match(h.url, plan.get("entity", "")) and "wikipedia" not in h.url:
+                homepage = f"https://www.{web.registrable(web.domain_of(h.url))}/"
+                break
     plan["official"] = web.registrable(web.domain_of(homepage)) if homepage else ""
     trace["wikidata"] = wd
     trace["steps"].append(f"search {len(hits)} hits @{time.time() - t0:.1f}s")
@@ -315,7 +321,7 @@ def answer(question: str, budget_s: float | None = None) -> Result:
     urls.sort(key=lambda u: 0 if entity_domain_match(u, plan.get("entity", ""), plan["official"]) else 1)
     urls = urls[: config.MAX_PAGES]
     if homepage and t in ("phone", "email", "address", "url") and not any(
-            web.registrable(web.domain_of(u)) == plan["official"] for u in urls):
+            u.rstrip("/") == homepage.rstrip("/") for u in urls):
         urls = [homepage] + urls[: config.MAX_PAGES - 1]
     pages = web.fetch_many(urls, timeout_s=min(7.0, left() - 7)) if urls and left() > 9 else []
     # Search snippets are a cheap extra "page": they often carry the value directly.
@@ -350,7 +356,7 @@ def answer(question: str, budget_s: float | None = None) -> Result:
     read_pages = ok_pages + [snippet_page]
     if left() > 3:
         try:
-            c = llm_read(read_pages, plan, usage)
+            c = llm_read(read_pages, plan, usage, max_time=max(1.0, left() - 1.5))
             if c:
                 cands.append(c)
                 trace["llm_answer"] = c.value

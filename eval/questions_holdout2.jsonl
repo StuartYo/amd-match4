@@ -1,0 +1,8 @@
+{"id": "h2_01", "question": "What is the latest version of pandas?", "answers": ["3.0.6"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "h2_02", "question": "What is the latest version of React on npm?", "answers": ["19.3.1"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "h2_03", "question": "What is the latest stable version of Go?", "answers": ["1.27.2"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "h2_04", "question": "What is the latest release of Docker Compose?", "answers": ["5.6.0"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "h2_05", "question": "What is the latest release of the uv Python package manager?", "answers": ["0.13.1"], "type": "version", "truth_checked": "2026-10-15"}
+{"id": "h2_06", "question": "What is the general questions phone number for Yosemite National Park?", "answers": ["209-372-0200"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "h2_07", "question": "What phone number gives recorded park information for Zion National Park?", "answers": ["435-772-3256"], "type": "phone", "truth_checked": "2026-10-15"}
+{"id": "h2_08", "question": "Who is the CEO of Google?", "answers": ["Sundar Pichai"], "type": "name", "truth_checked": "2026-10-15"}

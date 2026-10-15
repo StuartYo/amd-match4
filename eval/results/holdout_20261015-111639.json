@@ -1,0 +1,658 @@
+{
+ "set": "holdout",
+ "summary": {
+  "agent": {
+   "n": 8,
+   "strict": 8,
+   "lenient": 8,
+   "mean_s": 16.3,
+   "max_s": 34.4,
+   "tokens": 16384
+  }
+ },
+ "rows": [
+  {
+   "mode": "agent",
+   "id": "hold01",
+   "pred": "0.143.1",
+   "answers": [
+    "0.143.1"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 24.0,
+   "confidence": 0.97,
+   "sources": [
+    "https://pypi.org/project/fastapi/"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 168,
+    "completion_tokens": 84,
+    "seconds": 4.07
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @21.7s",
+     "fetched 0/0 @24.0s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "FastAPI",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "fastapi",
+     "queries": [
+      "What is the latest version of FastAPI?",
+      "What is the latest version of FastAPI on PyPI?",
+      "What is the current version of FastAPI?"
+     ]
+    },
+    "wikidata": null,
+    "pages": [],
+    "top": [
+     [
+      "0.143.1",
+      7.3,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 23.99
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold02",
+   "pred": "7.0.2",
+   "answers": [
+    "7.0.2"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 9.8,
+   "confidence": 0.97,
+   "sources": [
+    "https://github.com/microsoft/TypeScript/releases/latest"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 699,
+    "completion_tokens": 97,
+    "seconds": 5.14
+   },
+   "trace": {
+    "steps": [
+     "search 5 hits @6.6s",
+     "fetched 0/5 @8.7s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "TypeScript",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "",
+     "queries": [
+      "What is the latest version of TypeScript on npm?",
+      "What is the latest version of TypeScript on npm?",
+      "What is the current version of TypeScript available on npm?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q978185",
+     "label": "TypeScript",
+     "description": "programming language, superset of JavaScript that compiles to JavaScript",
+     "website": "https://www.typescriptlang.org/"
+    },
+    "pages": [],
+    "llm_answer": "7.0.2",
+    "top": [
+     [
+      "7.0.2",
+      9.4,
+      "api+llm",
+      [
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 9.81
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold03",
+   "pred": "26.04.1",
+   "answers": [
+    "26.04",
+    "26.04.1"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 15.6,
+   "confidence": 0.8664735915663206,
+   "sources": [
+    "https://endoflife.date/ubuntu",
+    "https://ubuntu.com/blog/ubuntu-22-04-lts-whats-new-linux-desktop"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2614,
+    "completion_tokens": 93,
+    "seconds": 5.96
+   },
+   "trace": {
+    "steps": [
+     "search 5 hits @5.3s",
+     "fetched 4/5 @13.1s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Ubuntu",
+     "attribute": "latest LTS version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest Ubuntu LTS version?",
+      "What is the latest Ubuntu LTS version?",
+      "What is the current stable version of Ubuntu?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q381",
+     "label": "Ubuntu",
+     "description": "Linux distribution developed by Canonical",
+     "website": "https://ubuntu.com/"
+    },
+    "pages": [
+     "https://ubuntu.com/blog/what-is-an-ubuntu-lts-release",
+     "https://ubuntu.com/blog/ubuntu-22-04-lts-whats-new-linux-desktop",
+     "https://www.howtogeek.com/what-is-ubuntu-lts-and-when-should-you-use-it/",
+     "https://spinupwp.com/doc/what-does-lts-mean-ubuntu/"
+    ],
+    "llm_answer": "24.04",
+    "top": [
+     [
+      "26.04.1",
+      8.9,
+      "api",
+      [
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "22.04",
+      8.06,
+      "regex",
+      [
+       "howtogeek.com",
+       "snippets",
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "20.04",
+      7.1,
+      "regex",
+      [
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "26.04",
+      6.96,
+      "regex",
+      [
+       "howtogeek.com",
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "18.04",
+      5.55,
+      "regex",
+      [
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ]
+    ],
+    "seconds": 15.64
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold04",
+   "pred": "0.40.4",
+   "answers": [
+    "0.40.4"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 13.3,
+   "confidence": 0.906087031360185,
+   "sources": [
+    "https://github.com/ollama/ollama/releases/latest"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2765,
+    "completion_tokens": 100,
+    "seconds": 6.41
+   },
+   "trace": {
+    "steps": [
+     "search 4 hits @6.6s",
+     "fetched 4/4 @10.3s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Ollama",
+     "attribute": "latest release version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest release version of Ollama?",
+      "What is the latest release version of Ollama?",
+      "What is the current version of Ollama?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q124636097",
+     "label": "Ollama",
+     "description": "software for running large language models (LLMs) on a local computer or in the cloud",
+     "website": "https://ollama.com/"
+    },
+    "pages": [
+     "https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/model-providers/ollama",
+     "https://github.com/ollama",
+     "https://developer.amd.com/playbooks/ollama-getting-started/",
+     "https://www.panofind.com/ollama/"
+    ],
+    "llm_answer": "0.32.6",
+    "top": [
+     [
+      "0.40.4",
+      6.0,
+      "api",
+      []
+     ],
+     [
+      "0.32.6",
+      3.59,
+      "llm",
+      [
+       "amd.com"
+      ]
+     ],
+     [
+      "0.3",
+      2.85,
+      "regex",
+      [
+       "amd.com",
+       "panofind.com"
+      ]
+     ],
+     [
+      "127.0.0.1",
+      2.55,
+      "regex",
+      [
+       "panofind.com"
+      ]
+     ],
+     [
+      "0.6.3",
+      2.5,
+      "api-guess",
+      []
+     ]
+    ],
+    "seconds": 13.28
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold05",
+   "pred": "800-786-9199",
+   "answers": [
+    "800-786-9199"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 10.1,
+   "confidence": 0.75,
+   "sources": [
+    "https://www.uspto.gov/about-us/contact-us"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 1861,
+    "completion_tokens": 107,
+    "seconds": 5.97
+   },
+   "trace": {
+    "steps": [
+     "search 3 hits @5.9s",
+     "fetched 4/4 @7.1s",
+     "followed 2 @7.8s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "USPTO",
+     "attribute": "general phone number",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the USPTO's general phone number?",
+      "What is the USPTO's official phone number?",
+      "USPTO contact information including phone number"
+     ]
+    },
+    "wikidata": {
+     "id": "Q1459541",
+     "label": "United States Patent and Trademark Office",
+     "description": "agency in the United States Department of Commerce",
+     "website": "http://www.uspto.gov/"
+    },
+    "pages": [
+     "https://www.uspto.gov/",
+     "https://trademarkcenter.uspto.gov/",
+     "https://tmsearch.uspto.gov/search/search-information",
+     "https://fees.uspto.gov/",
+     "https://www.uspto.gov/about-us/contact-us",
+     "https://www.uspto.gov/about-us"
+    ],
+    "llm_answer": "1-800-786-9199",
+    "top": [
+     [
+      "800-786-9199",
+      6.46,
+      "llm",
+      [
+       "uspto.gov"
+      ]
+     ],
+     [
+      "855-559-8589",
+      4.4,
+      "regex",
+      [
+       "uspto.gov"
+      ]
+     ],
+     [
+      "866-767-3848",
+      4.4,
+      "regex",
+      [
+       "uspto.gov"
+      ]
+     ],
+     [
+      "571-272-3350",
+      4.25,
+      "regex",
+      [
+       "uspto.gov"
+      ]
+     ],
+     [
+      "571-272-3275",
+      3.9,
+      "regex",
+      [
+       "uspto.gov"
+      ]
+     ]
+    ],
+    "seconds": 10.13
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold06",
+   "pred": "Elliott Hill",
+   "answers": [
+    "Elliott Hill"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 10.0,
+   "confidence": 0.97,
+   "sources": [
+    "https://about.nike.com/en/magazine/elliott-hill-ceo-of-sport-interview",
+    "https://investors.nike.com/governance/board-of-directors",
+    "https://www.wired.com/story/nikes-next-ceo-has-one-hell-of-a-challenge-ahead/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2693,
+    "completion_tokens": 89,
+    "seconds": 5.7
+   },
+   "trace": {
+    "steps": [
+     "search 6 hits @5.9s",
+     "fetched 5/6 @7.6s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Nike",
+     "attribute": "CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the CEO of Nike?",
+      "Who is the current CEO of Nike?",
+      "What is the latest CEO of Nike?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q483915",
+     "label": "Nike",
+     "description": "American athletic equipment company",
+     "website": "https://www.nike.com/"
+    },
+    "pages": [
+     "https://about.nike.com/en/magazine/elliott-hill-ceo-of-sport-interview",
+     "https://investors.nike.com/governance/board-of-directors",
+     "https://investors.nike.com/news-events/press-releases",
+     "https://www.wired.com/story/nikes-next-ceo-has-one-hell-of-a-challenge-ahead/",
+     "https://www.cnbc.com/2025/10/21/nike-ceo-earn-shelf-space-amid-competition.html"
+    ],
+    "llm_answer": "Elliott Hill",
+    "top": [
+     [
+      "Elliott Hill",
+      7.1,
+      "llm",
+      [
+       "cnbc.com",
+       "nike.com",
+       "snippets",
+       "wired.com"
+      ]
+     ]
+    ],
+    "seconds": 10.01
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold07",
+   "pred": "2.5.4",
+   "answers": [
+    "2.5.4"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 13.0,
+   "confidence": 0.97,
+   "sources": [
+    "https://endoflife.date/numpy",
+    "https://pepy.tech/projects/numpy"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 1979,
+    "completion_tokens": 100,
+    "seconds": 5.41
+   },
+   "trace": {
+    "steps": [
+     "search 2 hits @6.5s",
+     "fetched 2/2 @11.2s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "NumPy",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "numpy",
+     "queries": [
+      "What is the latest version of NumPy?",
+      "What is the latest version of NumPy on PyPI?",
+      "What is the current version of NumPy?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q197520",
+     "label": "NumPy",
+     "description": "numerical programming package for the Python programming language",
+     "website": "https://numpy.org/"
+    },
+    "pages": [
+     "https://pepy.tech/projects/numpy",
+     "https://mimo.org/glossary/python/numpy"
+    ],
+    "llm_answer": "2.5.4",
+    "top": [
+     [
+      "2.5.4",
+      9.9,
+      "api+llm",
+      [
+       "pepy.tech"
+      ]
+     ]
+    ],
+    "seconds": 13.04
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold08",
+   "pred": "0.31.0",
+   "answers": [
+    "0.31.0"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 34.4,
+   "confidence": 0.5683199834782481,
+   "sources": [
+    "https://github.com/vllm-project/vllm/releases/latest"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2833,
+    "completion_tokens": 102,
+    "seconds": 26.19
+   },
+   "trace": {
+    "steps": [
+     "search 9 hits @6.7s",
+     "fetched 6/6 @11.0s",
+     "followed 3 @11.8s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "vLLM",
+     "attribute": "latest release",
+     "is_latest": true,
+     "ecosystem": "github",
+     "package": "",
+     "queries": [
+      "What is the latest release of vLLM?",
+      "What is the latest release of vLLM on GitHub?",
+      "Where can I find the latest version of vLLM?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q132956646",
+     "label": "vllm",
+     "description": "Python library",
+     "website": "https://docs.vllm.ai/en/latest/"
+    },
+    "pages": [
+     "https://vllm.ai/blog/2026-07-16-keeping-vllm-production-quality",
+     "https://docs.vllm.ai/en/latest/getting_started/installation/gpu/",
+     "https://github.com/orgs/nvidia-ai-iot/packages/container/package/vllm",
+     "https://github.com/rahulsinghai/vLLM",
+     "https://github.com/waybarrios/vllm-mlx",
+     "https://github.com/vllm-project/vllm-neuron",
+     "https://vllm.ai/blog/tags/release",
+     "https://docs.vllm.ai/en/latest/cli/download-kernels/",
+     "https://docs.vllm.ai/en/latest/contributing/release_process/"
+    ],
+    "llm_answer": "0.18.0",
+    "top": [
+     [
+      "0.31.0",
+      6.5,
+      "api",
+      []
+     ],
+     [
+      "13.0",
+      6.5,
+      "regex",
+      [
+       "github.com",
+       "vllm.ai"
+      ]
+     ],
+     [
+      "0.5.3",
+      5.7,
+      "regex",
+      [
+       "github.com",
+       "vllm.ai"
+      ]
+     ],
+     [
+      "0.18.0",
+      5.3,
+      "llm",
+      [
+       "vllm.ai"
+      ]
+     ],
+     [
+      "12.8",
+      5.2,
+      "regex",
+      [
+       "github.com",
+       "vllm.ai"
+      ]
+     ]
+    ],
+    "seconds": 34.45
+   }
+  }
+ ]
+}

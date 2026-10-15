@@ -41,7 +41,7 @@ class Usage:
 class BaseLLM:
     name = "base"
 
-    def chat(self, messages: list[dict], max_tokens: int = 256, usage: Usage | None = None) -> str:
+    def chat(self, messages: list[dict], max_tokens: int = 256, usage: Usage | None = None, max_time: float | None = None) -> str:
         raise NotImplementedError
 
 
@@ -63,7 +63,7 @@ class TransformersLLM(BaseLLM):
         self.model.eval()
         self._lock = threading.Lock()
 
-    def chat(self, messages, max_tokens=256, usage=None):
+    def chat(self, messages, max_tokens=256, usage=None, max_time=None):
         torch = self._torch
         try:
             prompt = self.tok.apply_chat_template(
@@ -82,6 +82,7 @@ class TransformersLLM(BaseLLM):
                 top_p=None,
                 top_k=None,
                 pad_token_id=self.tok.eos_token_id,
+                max_time=max_time,
             )
         gen = out[0][ids["input_ids"].shape[1]:]
         text = self.tok.decode(gen, skip_special_tokens=True)
@@ -100,7 +101,7 @@ class OpenAICompatLLM(BaseLLM):
         self.model_id = model
         self.client = httpx.Client(timeout=60)
 
-    def chat(self, messages, max_tokens=256, usage=None):
+    def chat(self, messages, max_tokens=256, usage=None, max_time=None):
         t0 = time.time()
         body = {
             "model": self.model_id,
@@ -109,7 +110,7 @@ class OpenAICompatLLM(BaseLLM):
             "temperature": 0,
             "chat_template_kwargs": {"enable_thinking": False},
         }
-        r = self.client.post(self.base_url + "/chat/completions", json=body)
+        r = self.client.post(self.base_url + "/chat/completions", json=body, timeout=max_time or 60)
         r.raise_for_status()
         data = r.json()
         text = data["choices"][0]["message"]["content"] or ""

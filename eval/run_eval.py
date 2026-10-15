@@ -48,7 +48,7 @@ def correct(pred: str, answers: list[str], qtype: str) -> tuple[bool, bool]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--set", default="dev", choices=["dev", "holdout"])
+    ap.add_argument("--set", default="dev", choices=["dev", "holdout", "holdout2"])
     ap.add_argument("--mode", default="both", choices=["agent", "baseline", "both"])
     ap.add_argument("--only")
     a = ap.parse_args()

@@ -116,6 +116,21 @@ def latest_from_github(repo: str) -> Candidate | None:
     return None
 
 
+def github_canonical_repo(entity: str) -> str | None:
+    """The project's own repository, e.g. "Ollama" -> ollama/ollama, "vLLM" -> vllm-project/vllm."""
+    name = _slug(entity).replace("-", "")
+    if not name:
+        return None
+    data = get_json("https://api.github.com/search/repositories", {"q": f"{entity} in:name", "sort": "stars", "per_page": 5})
+    if not isinstance(data, dict):
+        return None
+    for it in data.get("items", []):
+        repo = it.get("name", "").lower().replace("-", "").replace("_", "")
+        if repo == name and it.get("stargazers_count", 0) >= 500:
+            return it["full_name"]
+    return None
+
+
 def version_candidates(plan: dict, github_repos: list[str]) -> list[Candidate]:
     """Only used when the question asks for the latest/current version."""
     out: list[Candidate] = []
@@ -139,8 +154,19 @@ def version_candidates(plan: dict, github_repos: list[str]) -> list[Candidate]:
         c = latest_from_npm(pkg)
         if c:
             out.append(c)
-    for repo in github_repos[:1]:
+    # The planner often cannot name the ecosystem; probe the canonical GitHub
+    # repository, then registries by the entity's own name (weaker evidence:
+    # a registry package with the same name can be a client library).
+    repo = github_canonical_repo(pkg or entity)
+    if repo:
         c = latest_from_github(repo)
         if c:
             out.append(c)
+    if not pkg and entity and eco not in ("pypi", "npm"):
+        guess = _slug(entity)
+        for fn in (latest_from_pypi, latest_from_npm):
+            c = fn(guess)
+            if c:
+                c.method = "api-guess"
+                out.append(c)
     return out

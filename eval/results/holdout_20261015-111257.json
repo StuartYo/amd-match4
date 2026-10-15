@@ -1,0 +1,779 @@
+{
+ "set": "holdout",
+ "summary": {
+  "agent": {
+   "n": 8,
+   "strict": 5,
+   "lenient": 5,
+   "mean_s": 15.1,
+   "max_s": 30.3,
+   "tokens": 14914
+  },
+  "baseline": {
+   "n": 8,
+   "strict": 0,
+   "lenient": 0,
+   "mean_s": 0.3,
+   "max_s": 0.6,
+   "tokens": 410
+  }
+ },
+ "rows": [
+  {
+   "mode": "agent",
+   "id": "hold01",
+   "pred": "0.143.1",
+   "answers": [
+    "0.143.1"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 23.3,
+   "confidence": 0.97,
+   "sources": [
+    "https://pypi.org/project/fastapi/"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 168,
+    "completion_tokens": 84,
+    "seconds": 4.89
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @22.3s",
+     "fetched 0/0 @23.3s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "FastAPI",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "fastapi",
+     "queries": [
+      "What is the latest version of FastAPI?",
+      "What is the latest version of FastAPI on PyPI?",
+      "What is the current version of FastAPI?"
+     ]
+    },
+    "wikidata": null,
+    "pages": [],
+    "top": [
+     [
+      "0.143.1",
+      6.8,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 23.28
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold02",
+   "pred": "7.0.2",
+   "answers": [
+    "7.0.2"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 8.5,
+   "confidence": 0.75,
+   "sources": [],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 699,
+    "completion_tokens": 97,
+    "seconds": 4.87
+   },
+   "trace": {
+    "steps": [
+     "search 5 hits @6.8s",
+     "fetched 0/5 @7.5s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "TypeScript",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "",
+     "queries": [
+      "What is the latest version of TypeScript on npm?",
+      "What is the latest version of TypeScript on npm?",
+      "What is the current version of TypeScript available on npm?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q978185",
+     "label": "TypeScript",
+     "description": "programming language, superset of JavaScript that compiles to JavaScript",
+     "website": "https://www.typescriptlang.org/"
+    },
+    "pages": [],
+    "llm_answer": "7.0.2",
+    "top": [
+     [
+      "7.0.2",
+      3.6,
+      "llm",
+      [
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 8.54
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold03",
+   "pred": "26.04.1",
+   "answers": [
+    "26.04",
+    "26.04.1"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 16.8,
+   "confidence": 0.8664735915663206,
+   "sources": [
+    "https://endoflife.date/ubuntu",
+    "https://ubuntu.com/blog/ubuntu-22-04-lts-whats-new-linux-desktop"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2614,
+    "completion_tokens": 93,
+    "seconds": 6.0
+   },
+   "trace": {
+    "steps": [
+     "search 5 hits @6.5s",
+     "fetched 4/5 @14.3s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Ubuntu",
+     "attribute": "latest LTS version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest Ubuntu LTS version?",
+      "What is the latest Ubuntu LTS version?",
+      "What is the current stable version of Ubuntu?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q381",
+     "label": "Ubuntu",
+     "description": "Linux distribution developed by Canonical",
+     "website": "https://ubuntu.com/"
+    },
+    "pages": [
+     "https://ubuntu.com/blog/what-is-an-ubuntu-lts-release",
+     "https://ubuntu.com/blog/ubuntu-22-04-lts-whats-new-linux-desktop",
+     "https://www.howtogeek.com/what-is-ubuntu-lts-and-when-should-you-use-it/",
+     "https://spinupwp.com/doc/what-does-lts-mean-ubuntu/"
+    ],
+    "llm_answer": "24.04",
+    "top": [
+     [
+      "26.04.1",
+      8.9,
+      "api",
+      [
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "22.04",
+      8.06,
+      "regex",
+      [
+       "howtogeek.com",
+       "snippets",
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "20.04",
+      7.1,
+      "regex",
+      [
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "26.04",
+      6.96,
+      "regex",
+      [
+       "howtogeek.com",
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "18.04",
+      5.55,
+      "regex",
+      [
+       "spinupwp.com",
+       "ubuntu.com"
+      ]
+     ]
+    ],
+    "seconds": 16.78
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold04",
+   "pred": "0.32.6",
+   "answers": [
+    "0.40.4"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 10.5,
+   "confidence": 0.48140896525889826,
+   "sources": [
+    "https://developer.amd.com/playbooks/ollama-getting-started/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2765,
+    "completion_tokens": 100,
+    "seconds": 6.54
+   },
+   "trace": {
+    "steps": [
+     "search 4 hits @6.1s",
+     "fetched 4/4 @7.5s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Ollama",
+     "attribute": "latest release version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest release version of Ollama?",
+      "What is the latest release version of Ollama?",
+      "What is the current version of Ollama?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q124636097",
+     "label": "Ollama",
+     "description": "software for running large language models (LLMs) on a local computer or in the cloud",
+     "website": "https://ollama.com/"
+    },
+    "pages": [
+     "https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/model-providers/ollama",
+     "https://github.com/ollama",
+     "https://developer.amd.com/playbooks/ollama-getting-started/",
+     "https://www.panofind.com/ollama/"
+    ],
+    "llm_answer": "0.32.6",
+    "top": [
+     [
+      "0.32.6",
+      3.59,
+      "llm",
+      [
+       "amd.com"
+      ]
+     ],
+     [
+      "0.3",
+      2.85,
+      "regex",
+      [
+       "amd.com",
+       "panofind.com"
+      ]
+     ],
+     [
+      "127.0.0.1",
+      2.55,
+      "regex",
+      [
+       "panofind.com"
+      ]
+     ],
+     [
+      "0.1",
+      2.35,
+      "regex",
+      [
+       "github.com",
+       "panofind.com"
+      ]
+     ]
+    ],
+    "seconds": 10.53
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold05",
+   "pred": "",
+   "answers": [
+    "800-786-9199"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 7.7,
+   "confidence": 0.0,
+   "sources": [],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 400,
+    "completion_tokens": 98,
+    "seconds": 4.41
+   },
+   "trace": {
+    "steps": [
+     "search 3 hits @5.8s",
+     "fetched 3/3 @6.8s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "USPTO",
+     "attribute": "general phone number",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the USPTO's general phone number?",
+      "What is the USPTO's official phone number?",
+      "USPTO contact information including phone number"
+     ]
+    },
+    "wikidata": {
+     "id": "Q1459541",
+     "label": "United States Patent and Trademark Office",
+     "description": "agency in the United States Department of Commerce",
+     "website": "http://www.uspto.gov/"
+    },
+    "pages": [
+     "https://trademarkcenter.uspto.gov/",
+     "https://tmsearch.uspto.gov/search/search-information",
+     "https://fees.uspto.gov/"
+    ],
+    "llm_answer": "fees.uspto.gov",
+    "top": [],
+    "seconds": 7.69
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold06",
+   "pred": "Elliott Hill",
+   "answers": [
+    "Elliott Hill"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 12.6,
+   "confidence": 0.97,
+   "sources": [
+    "https://about.nike.com/en/magazine/elliott-hill-ceo-of-sport-interview",
+    "https://investors.nike.com/governance/board-of-directors",
+    "https://www.wired.com/story/nikes-next-ceo-has-one-hell-of-a-challenge-ahead/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2693,
+    "completion_tokens": 89,
+    "seconds": 5.85
+   },
+   "trace": {
+    "steps": [
+     "search 6 hits @6.8s",
+     "fetched 5/6 @9.9s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Nike",
+     "attribute": "CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the CEO of Nike?",
+      "Who is the current CEO of Nike?",
+      "What is the latest CEO of Nike?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q483915",
+     "label": "Nike",
+     "description": "American athletic equipment company",
+     "website": "https://www.nike.com/"
+    },
+    "pages": [
+     "https://about.nike.com/en/magazine/elliott-hill-ceo-of-sport-interview",
+     "https://investors.nike.com/governance/board-of-directors",
+     "https://investors.nike.com/news-events/press-releases",
+     "https://www.wired.com/story/nikes-next-ceo-has-one-hell-of-a-challenge-ahead/",
+     "https://www.cnbc.com/2025/10/21/nike-ceo-earn-shelf-space-amid-competition.html"
+    ],
+    "llm_answer": "Elliott Hill",
+    "top": [
+     [
+      "Elliott Hill",
+      7.1,
+      "llm",
+      [
+       "cnbc.com",
+       "nike.com",
+       "snippets",
+       "wired.com"
+      ]
+     ]
+    ],
+    "seconds": 12.6
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold07",
+   "pred": "2.5.4",
+   "answers": [
+    "2.5.4"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 10.7,
+   "confidence": 0.97,
+   "sources": [
+    "https://endoflife.date/numpy",
+    "https://pepy.tech/projects/numpy"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 1979,
+    "completion_tokens": 100,
+    "seconds": 5.58
+   },
+   "trace": {
+    "steps": [
+     "search 2 hits @6.1s",
+     "fetched 2/2 @8.9s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "NumPy",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "numpy",
+     "queries": [
+      "What is the latest version of NumPy?",
+      "What is the latest version of NumPy on PyPI?",
+      "What is the current version of NumPy?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q197520",
+     "label": "NumPy",
+     "description": "numerical programming package for the Python programming language",
+     "website": "https://numpy.org/"
+    },
+    "pages": [
+     "https://pepy.tech/projects/numpy",
+     "https://mimo.org/glossary/python/numpy"
+    ],
+    "llm_answer": "2.5.4",
+    "top": [
+     [
+      "2.5.4",
+      9.69,
+      "api+llm",
+      [
+       "pepy.tech"
+      ]
+     ]
+    ],
+    "seconds": 10.74
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "hold08",
+   "pred": "13.0",
+   "answers": [
+    "0.31.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 30.3,
+   "confidence": 0.7300743839811187,
+   "sources": [
+    "https://docs.vllm.ai/en/latest/getting_started/installation/gpu/",
+    "https://vllm.ai/blog/2026-07-16-keeping-vllm-production-quality",
+    "https://github.com/orgs/nvidia-ai-iot/packages/container/package/vllm"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2833,
+    "completion_tokens": 102,
+    "seconds": 25.0
+   },
+   "trace": {
+    "steps": [
+     "search 9 hits @5.9s",
+     "fetched 6/6 @7.8s",
+     "followed 3 @8.8s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "vLLM",
+     "attribute": "latest release",
+     "is_latest": true,
+     "ecosystem": "github",
+     "package": "",
+     "queries": [
+      "What is the latest release of vLLM?",
+      "What is the latest release of vLLM on GitHub?",
+      "Where can I find the latest version of vLLM?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q132956646",
+     "label": "vllm",
+     "description": "Python library",
+     "website": "https://docs.vllm.ai/en/latest/"
+    },
+    "pages": [
+     "https://vllm.ai/blog/2026-07-16-keeping-vllm-production-quality",
+     "https://docs.vllm.ai/en/latest/getting_started/installation/gpu/",
+     "https://github.com/orgs/nvidia-ai-iot/packages/container/package/vllm",
+     "https://github.com/rahulsinghai/vLLM",
+     "https://github.com/waybarrios/vllm-mlx",
+     "https://github.com/vllm-project/vllm-neuron",
+     "https://vllm.ai/blog/tags/release",
+     "https://docs.vllm.ai/en/latest/cli/download-kernels/",
+     "https://docs.vllm.ai/en/latest/contributing/release_process/"
+    ],
+    "llm_answer": "0.18.0",
+    "top": [
+     [
+      "13.0",
+      6.5,
+      "regex",
+      [
+       "github.com",
+       "vllm.ai"
+      ]
+     ],
+     [
+      "0.5.3",
+      5.7,
+      "regex",
+      [
+       "github.com",
+       "vllm.ai"
+      ]
+     ],
+     [
+      "0.18.0",
+      5.3,
+      "llm",
+      [
+       "vllm.ai"
+      ]
+     ],
+     [
+      "12.8",
+      5.2,
+      "regex",
+      [
+       "github.com",
+       "vllm.ai"
+      ]
+     ],
+     [
+      "12.9",
+      5.1,
+      "regex",
+      [
+       "vllm.ai"
+      ]
+     ]
+    ],
+    "seconds": 30.34
+   }
+  },
+  {
+   "mode": "baseline",
+   "id": "hold01",
+   "pred": "20.1.0",
+   "answers": [
+    "0.143.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.4,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 7,
+    "seconds": 0.36
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold02",
+   "pred": "16.1.0",
+   "answers": [
+    "7.0.2"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 45,
+    "completion_tokens": 7,
+    "seconds": 0.29
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold03",
+   "pred": "20.04",
+   "answers": [
+    "26.04",
+    "26.04.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 43,
+    "completion_tokens": 6,
+    "seconds": 0.25
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold04",
+   "pred": "1.1.0",
+   "answers": [
+    "0.40.4"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.2,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 46,
+    "completion_tokens": 6,
+    "seconds": 0.24
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold05",
+   "pred": "800-275-3590",
+   "answers": [
+    "800-786-9199"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.6,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 46,
+    "completion_tokens": 15,
+    "seconds": 0.65
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold06",
+   "pred": "Nike",
+   "answers": [
+    "Elliott Hill"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.1,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 42,
+    "completion_tokens": 2,
+    "seconds": 0.1
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold07",
+   "pred": "1.9.2",
+   "answers": [
+    "2.5.4"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 44,
+    "completion_tokens": 6,
+    "seconds": 0.28
+   },
+   "trace": {}
+  },
+  {
+   "mode": "baseline",
+   "id": "hold08",
+   "pred": "2.1.0",
+   "answers": [
+    "0.31.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 0.3,
+   "confidence": 0.5,
+   "sources": [],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 45,
+    "completion_tokens": 6,
+    "seconds": 0.3
+   },
+   "trace": {}
+  }
+ ]
+}

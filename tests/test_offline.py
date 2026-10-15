@@ -63,7 +63,7 @@ def test_html_parsing_keeps_tel_and_tables():
 
 
 class FakeLLM(llm.BaseLLM):
-    def chat(self, messages, max_tokens=256, usage=None):
+    def chat(self, messages, max_tokens=256, usage=None, **kw):
         return '{"answer": "999-999-9999", "source": 1}'
 
 
