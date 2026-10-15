@@ -1,0 +1,1352 @@
+{
+ "set": "dev",
+ "summary": {
+  "agent": {
+   "n": 16,
+   "strict": 9,
+   "lenient": 9,
+   "mean_s": 16.0,
+   "max_s": 35.2,
+   "tokens": 39819
+  }
+ },
+ "rows": [
+  {
+   "mode": "agent",
+   "id": "dev01",
+   "pred": "2.34.2",
+   "answers": [
+    "2.34.2"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 23.1,
+   "confidence": 0.8519528019683106,
+   "sources": [
+    "https://pypi.org/project/requests/"
+   ],
+   "usage": {
+    "calls": 1,
+    "prompt_tokens": 173,
+    "completion_tokens": 87,
+    "seconds": 4.03
+   },
+   "trace": {
+    "steps": [
+     "search 0 hits @22.1s",
+     "fetched 0/0 @23.1s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "requests",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "requests",
+     "queries": [
+      "What is the latest version of the Python package requests on PyPI?",
+      "What is the latest version of the requests package on PyPI?",
+      "What is the current version of the requests library on PyPI?"
+     ]
+    },
+    "wikidata": null,
+    "top": [
+     [
+      "2.34.2",
+      3.0,
+      "api",
+      []
+     ]
+    ],
+    "seconds": 23.1
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev02",
+   "pred": "20.19.0",
+   "answers": [
+    "24.22.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 14.8,
+   "confidence": 0.9387738371800919,
+   "sources": [
+    "https://nodejs.org/en/blog/release/v20.19.0"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2953,
+    "completion_tokens": 101,
+    "seconds": 7.82
+   },
+   "trace": {
+    "steps": [
+     "search 7 hits @7.1s",
+     "fetched 6/6 @10.0s",
+     "followed 2 @10.7s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Node.js",
+     "attribute": "Latest LTS version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "",
+     "queries": [
+      "What is the latest LTS version of Node.js?",
+      "What is the latest LTS version of Node.js?",
+      "What is the current Long Term Support version of Node.js?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q756100",
+     "label": "Node.js",
+     "description": "JavaScript runtime environment",
+     "website": "https://nodejs.org"
+    },
+    "llm_answer": "20.19.0",
+    "top": [
+     [
+      "20.19.0",
+      9.4,
+      "llm",
+      [
+       "nodejs.org",
+       "snippets"
+      ]
+     ],
+     [
+      "20.11.1",
+      7.8,
+      "regex",
+      [
+       "nodejs.org",
+       "snippets"
+      ]
+     ],
+     [
+      "4.2.0",
+      7.45,
+      "regex",
+      [
+       "nodejs.org",
+       "snippets"
+      ]
+     ],
+     [
+      "24.22.0",
+      4.85,
+      "api",
+      [
+       "nodejs.org"
+      ]
+     ],
+     [
+      "26.12.0",
+      4.35,
+      "regex",
+      [
+       "nodejs.org"
+      ]
+     ]
+    ],
+    "seconds": 14.81
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev03",
+   "pred": "5.1.0",
+   "answers": [
+    "5.3.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 12.0,
+   "confidence": 0.9366568368465633,
+   "sources": [
+    "https://expressjs.com/en/blog/2025-03-31-v5-1-latest-release/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2183,
+    "completion_tokens": 101,
+    "seconds": 5.93
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @6.7s",
+     "fetched 2/6 @9.2s",
+     "followed 1 @9.7s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "express",
+     "attribute": "latest version",
+     "is_latest": true,
+     "ecosystem": "npm",
+     "package": "express",
+     "queries": [
+      "What is the latest version of the express package on npm?",
+      "What is the latest version of the express package on npm?",
+      "What is the current version of the express package on npm?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q97616392",
+     "label": "EXPRESS",
+     "description": "Japanese record label",
+     "website": ""
+    },
+    "llm_answer": "5.1.0",
+    "top": [
+     [
+      "5.1.0",
+      8.53,
+      "llm",
+      [
+       "expressjs.com",
+       "snippets"
+      ]
+     ],
+     [
+      "5.0.0",
+      6.63,
+      "regex",
+      [
+       "expressjs.com",
+       "tutorialkart.com"
+      ]
+     ],
+     [
+      "5.3.0",
+      4.5,
+      "api",
+      []
+     ],
+     [
+      "0.10",
+      2.75,
+      "regex",
+      [
+       "expressjs.com"
+      ]
+     ]
+    ],
+    "seconds": 12.04
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev04",
+   "pred": "1.37",
+   "answers": [
+    "1.37.1"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 14.0,
+   "confidence": 0.75,
+   "sources": [
+    "https://kubernetes.io/blog/2023/04/06/keeping-kubernetes-secure-with-updated-go-versions/",
+    "https://kubernetes.io/blog/2018/03/first-beta-version-of-kubernetes-1-10/",
+    "https://kubernetes.io/releases/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2633,
+    "completion_tokens": 93,
+    "seconds": 6.15
+   },
+   "trace": {
+    "steps": [
+     "search 5 hits @7.1s",
+     "fetched 4/5 @9.5s",
+     "followed 2 @11.1s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Kubernetes",
+     "attribute": "latest stable release",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest stable release of Kubernetes?",
+      "What is the latest stable release of Kubernetes?",
+      "What is the current version of Kubernetes?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q22661306",
+     "label": "Kubernetes",
+     "description": "software to manage containers on a server-cluster",
+     "website": "https://kubernetes.io"
+    },
+    "llm_answer": "1.35",
+    "top": [
+     [
+      "1.37",
+      63.98,
+      "regex",
+      [
+       "kubernetes.io"
+      ]
+     ],
+     [
+      "1.36",
+      54.33,
+      "regex",
+      [
+       "kubernetes.io"
+      ]
+     ],
+     [
+      "3.7.0",
+      8.12,
+      "regex",
+      [
+       "kubernetes.io"
+      ]
+     ],
+     [
+      "1.6",
+      6.67,
+      "regex",
+      [
+       "goteleport.com",
+       "kubernetes.io",
+       "ubuntu.com"
+      ]
+     ],
+     [
+      "1.35",
+      5.95,
+      "llm",
+      [
+       "kubernetes.io"
+      ]
+     ]
+    ],
+    "seconds": 14.04
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev05",
+   "pred": "1.19.0",
+   "answers": [
+    "1.99.0"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 15.9,
+   "confidence": 0.97,
+   "sources": [
+    "https://blog.rust-lang.org/2017/07/20/Rust-1.19/",
+    "https://doc.rust-lang.org/stable/releases.html",
+    "https://doc.rust-lang.org/nightly/cargo/CHANGELOG.html"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2586,
+    "completion_tokens": 96,
+    "seconds": 5.98
+   },
+   "trace": {
+    "steps": [
+     "search 12 hits @6.8s",
+     "fetched 6/6 @10.5s",
+     "followed 3 @12.6s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Rust",
+     "attribute": "latest stable version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest stable version of the Rust programming language?",
+      "What is the latest stable version of Rust?",
+      "What is the current stable version of Rust?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q575650",
+     "label": "Rust",
+     "description": "memory-safe programming language without garbage collection",
+     "website": "https://rust-lang.org/"
+    },
+    "llm_answer": "1.19.0",
+    "top": [
+     [
+      "1.19.0",
+      10.82,
+      "llm",
+      [
+       "rust-lang.org",
+       "snippets"
+      ]
+     ],
+     [
+      "1.99.0",
+      7.52,
+      "api",
+      [
+       "rust-lang.org"
+      ]
+     ],
+     [
+      "1.97.0",
+      7.45,
+      "regex",
+      [
+       "rust-lang.org",
+       "snippets"
+      ]
+     ],
+     [
+      "1.19",
+      5.12,
+      "regex",
+      [
+       "rust-lang.org",
+       "snippets"
+      ]
+     ],
+     [
+      "1.90.0",
+      4.0,
+      "regex",
+      [
+       "rust-lang.org"
+      ]
+     ]
+    ],
+    "seconds": 15.91
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev06",
+   "pred": "800-221-1212",
+   "answers": [
+    "800-221-1212"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 16.8,
+   "confidence": 0.75,
+   "sources": [
+    "https://www.delta.com/us/en/legal/privacy-and-security/protect-your-data",
+    "https://www.delta.com/us/en/legal/customer-commitment",
+    "https://www.delta.com/us/en/need-help/overview"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2834,
+    "completion_tokens": 112,
+    "seconds": 8.14
+   },
+   "trace": {
+    "steps": [
+     "search 19 hits @8.0s",
+     "fetched 6/6 @9.8s",
+     "followed 3 @12.1s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Delta Air Lines",
+     "attribute": "reservation phone number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What phone number should I call in the US for Delta Air Lines reservations?",
+      "What is the customer service phone number for Delta Air Lines?",
+      "What is the reservation number for Delta Air Lines in the US?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q188920",
+     "label": "Delta Air Lines",
+     "description": "airline in the United States (1929–present)",
+     "website": "https://www.delta.com/"
+    },
+    "llm_answer": "1-800-221-1212",
+    "top": [
+     [
+      "800-221-1212",
+      22.6,
+      "llm",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-800-1504",
+      14.88,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-847-0578",
+      8.15,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-654-4173",
+      7.78,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ],
+     [
+      "800-241-4141",
+      6.5,
+      "regex",
+      [
+       "delta.com"
+      ]
+     ]
+    ],
+    "seconds": 16.76
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev07",
+   "pred": "800-829-1040",
+   "answers": [
+    "800-829-1040"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 12.1,
+   "confidence": 0.97,
+   "sources": [
+    "https://www.irs.gov/help/let-us-help-you",
+    "https://www.irs.gov/help/contact-my-local-office-internationally"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2302,
+    "completion_tokens": 108,
+    "seconds": 5.95
+   },
+   "trace": {
+    "steps": [
+     "search 12 hits @6.4s",
+     "fetched 5/6 @8.5s",
+     "followed 3 @9.4s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "IRS",
+     "attribute": "phone number for individual tax questions",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the IRS phone number for individual tax questions?",
+      "What is the IRS phone number for individual tax questions?",
+      "What is the IRS contact number for personal tax inquiries?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q973587",
+     "label": "Internal Revenue Service",
+     "description": "revenue service of the United States federal government",
+     "website": "https://www.irs.gov"
+    },
+    "llm_answer": "800-829-1040",
+    "top": [
+     [
+      "800-829-1040",
+      10.85,
+      "llm",
+      [
+       "irs.gov",
+       "snippets"
+      ]
+     ],
+     [
+      "313-234-6146",
+      6.95,
+      "regex",
+      [
+       "irs.gov"
+      ]
+     ],
+     [
+      "866-346-9478",
+      4.57,
+      "regex",
+      [
+       "irs.gov"
+      ]
+     ],
+     [
+      "800-829-4933",
+      4.4,
+      "regex",
+      [
+       "irs.gov"
+      ]
+     ],
+     [
+      "800-949-2732",
+      4.22,
+      "regex",
+      [
+       "irs.gov"
+      ]
+     ]
+    ],
+    "seconds": 12.09
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev08",
+   "pred": "202-633-2214",
+   "answers": [
+    "202-633-2214"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 13.9,
+   "confidence": 0.75,
+   "sources": [
+    "https://airandspace.si.edu/visit/museum-dc/accessibility",
+    "https://airandspace.si.edu/support/host-event/museum-dc",
+    "https://airandspace.si.edu/contact"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2782,
+    "completion_tokens": 117,
+    "seconds": 7.62
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @7.3s",
+     "fetched 4/6 @8.4s",
+     "followed 3 @10.1s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "National Air and Space Museum",
+     "attribute": "phone number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the phone number of the National Air and Space Museum in Washington, DC?",
+      "What is the phone number of the National Air and Space Museum in Washington, DC?",
+      "Phone number of the National Air and Space Museum in Washington, DC?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q752669",
+     "label": "National Air and Space Museum",
+     "description": "aerospace museum in Washington, D.C.",
+     "website": "https://airandspace.si.edu/"
+    },
+    "llm_answer": "202-633-2214",
+    "top": [
+     [
+      "202-633-2214",
+      29.0,
+      "llm",
+      [
+       "si.edu"
+      ]
+     ],
+     [
+      "20151 703-572-4118",
+      26.18,
+      "regex",
+      [
+       "si.edu"
+      ]
+     ],
+     [
+      "800-513-3081",
+      12.55,
+      "regex",
+      [
+       "si.edu",
+       "snippets"
+      ]
+     ],
+     [
+      "703-572-4045",
+      9.82,
+      "regex",
+      [
+       "si.edu"
+      ]
+     ],
+     [
+      "202-633-2370",
+      7.82,
+      "regex",
+      [
+       "si.edu"
+      ]
+     ]
+    ],
+    "seconds": 13.89
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev09",
+   "pred": "800-275-8777",
+   "answers": [
+    "800-275-8777"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 16.9,
+   "confidence": 0.75,
+   "sources": [
+    "https://www.usps.com/help/contact-us.htm"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2141,
+    "completion_tokens": 107,
+    "seconds": 6.32
+   },
+   "trace": {
+    "steps": [
+     "search 9 hits @6.5s",
+     "fetched 5/6 @13.9s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "USPS",
+     "attribute": "customer service phone number",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the USPS customer service phone number?",
+      "What is the USPS customer service phone number?",
+      "USPS customer service number 2023"
+     ]
+    },
+    "wikidata": {
+     "id": "Q668687",
+     "label": "United States Postal Service",
+     "description": "independent agency of the U.S. federal government responsible for providing postal service",
+     "website": "https://www.usps.com/"
+    },
+    "llm_answer": "1-800-275-8777",
+    "top": [
+     [
+      "800-275-8777",
+      6.47,
+      "llm",
+      [
+       "usps.com"
+      ]
+     ],
+     [
+      "800-344-7779",
+      3.82,
+      "regex",
+      [
+       "usps.com"
+      ]
+     ],
+     [
+      "800-222-1811",
+      3.3,
+      "regex",
+      [
+       "usps.com"
+      ]
+     ],
+     [
+      "844-737-7826",
+      3.3,
+      "regex",
+      [
+       "usps.com"
+      ]
+     ],
+     [
+      "800-610-8734",
+      3.3,
+      "regex",
+      [
+       "usps.com"
+      ]
+     ]
+    ],
+    "seconds": 16.91
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev10",
+   "pred": "928-638-2468",
+   "answers": [
+    "928-638-7888"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 13.5,
+   "confidence": 0.75,
+   "sources": [
+    "https://explorethecanyon.com/grand-canyon-facts/",
+    "https://explorethecanyon.com/contact-us/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2619,
+    "completion_tokens": 111,
+    "seconds": 6.87
+   },
+   "trace": {
+    "steps": [
+     "search 13 hits @7.2s",
+     "fetched 3/6 @8.9s",
+     "followed 3 @10.5s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "Grand Canyon National Park",
+     "attribute": "General Information Phone Number",
+     "is_latest": false,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the general information phone number for Grand Canyon National Park?",
+      "What is the phone number for Grand Canyon National Park?",
+      "What is the general information phone number for Grand Canyon National Park?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q220289",
+     "label": "Grand Canyon National Park",
+     "description": "national park in Coconino and Mohave counties in Arizona, United States",
+     "website": "https://nps.gov/grca"
+    },
+    "llm_answer": "928-638-7888",
+    "top": [
+     [
+      "928-638-2468",
+      17.3,
+      "regex",
+      [
+       "explorethecanyon.com"
+      ]
+     ],
+     [
+      "928-638-7888",
+      10.2,
+      "llm",
+      [
+       "nps.gov"
+      ]
+     ],
+     [
+      "928-638-7779",
+      3.8,
+      "regex",
+      [
+       "nps.gov"
+      ]
+     ],
+     [
+      "928-638-7875",
+      2.75,
+      "regex",
+      [
+       "nps.gov"
+      ]
+     ],
+     [
+      "928-638-2807",
+      2.63,
+      "regex",
+      [
+       "explorethecanyon.com"
+      ]
+     ]
+    ],
+    "seconds": 13.51
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev11",
+   "pred": "Brian Niccol",
+   "answers": [
+    "Brian Niccol"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 13.8,
+   "confidence": 0.9525741268224334,
+   "sources": [
+    "https://ceoweekly.com/starbucks-ceo-brian-niccol-growth-strategy/",
+    "https://edition.cnn.com/2024/09/10/business/starbucks-ceo-brian-niccol"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2455,
+    "completion_tokens": 89,
+    "seconds": 5.76
+   },
+   "trace": {
+    "steps": [
+     "search 7 hits @7.5s",
+     "fetched 4/6 @11.4s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Starbucks",
+     "attribute": "CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the current CEO of Starbucks?",
+      "Who is the current CEO of Starbucks?",
+      "What is the current CEO of Starbucks?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q37158",
+     "label": "Starbucks",
+     "description": "American multinational coffee company",
+     "website": "https://www.starbucks.com/"
+    },
+    "llm_answer": "Brian Niccol",
+    "top": [
+     [
+      "Brian Niccol",
+      4.0,
+      "llm",
+      [
+       "ceoweekly.com",
+       "cnn.com",
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 13.78
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev12",
+   "pred": "Kelly Ortberg",
+   "answers": [
+    "Kelly Ortberg",
+    "Robert Ortberg",
+    "Robert K. Ortberg"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 12.1,
+   "confidence": 0.97,
+   "sources": [
+    "https://fortune.com/2024/07/31/boeing-kelly-ortberg-background-age-salary/",
+    "https://www.historyoasis.com/post/boeing-ceo-history",
+    "https://www.ceoinsightsindia.com/business-inside/kelly-ortberg-the-new-boeing-ceo-who-is-already-on-the-headlines-nwid-18953.html"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2718,
+    "completion_tokens": 90,
+    "seconds": 6.37
+   },
+   "trace": {
+    "steps": [
+     "search 7 hits @6.2s",
+     "fetched 5/6 @9.2s"
+    ],
+    "plan": {
+     "answer_type": "name",
+     "entity": "Boeing",
+     "attribute": "current CEO",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "Who is the current CEO of Boeing?",
+      "Who is the current CEO of Boeing?",
+      "What is the current CEO of Boeing?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q66",
+     "label": "Boeing",
+     "description": "American global aerospace and defense corporation",
+     "website": "https://boeing.com/"
+    },
+    "llm_answer": "Kelly Ortberg",
+    "top": [
+     [
+      "Kelly Ortberg",
+      4.6,
+      "llm",
+      [
+       "ceoinsightsindia.com",
+       "fortune.com",
+       "historyoasis.com",
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 12.08
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev13",
+   "pred": "2",
+   "answers": [
+    "1800",
+    "1,800"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 16.5,
+   "confidence": 0.7751285533173567,
+   "sources": [
+    "https://jessehouwing.net/measuring-the-value-of-ai/",
+    "https://www.tomshardware.com/pc-components/cpus/ryzen-to-the-top-how-amd-innovated-in-the-gaming-cpu-market",
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/inside-the-ai-accelerator-arms-race-amd-nvidia-and-hyperscalers-commit-to-annual-releases-through-the-decade"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2455,
+    "completion_tokens": 115,
+    "seconds": 6.37
+   },
+   "trace": {
+    "steps": [
+     "search 8 hits @11.0s",
+     "fetched 5/6 @14.0s"
+    ],
+    "plan": {
+     "answer_type": "number",
+     "entity": "Match 4 of the AMD AI League",
+     "attribute": "Points worth",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "How many points is Match 4 of the AMD AI League on lablab.ai worth?",
+      "How many points does Match 4 of the AMD AI League on lablab.ai worth?",
+      "What is the point value of Match 4 in the AMD AI League on lablab.ai?"
+     ]
+    },
+    "wikidata": null,
+    "top": [
+     [
+      "2",
+      8.35,
+      "regex",
+      [
+       "jessehouwing.net",
+       "pwc.com",
+       "semianalysis.com",
+       "snippets"
+      ]
+     ],
+     [
+      "3",
+      8.0,
+      "regex",
+      [
+       "jessehouwing.net",
+       "pwc.com",
+       "semianalysis.com",
+       "snippets"
+      ]
+     ],
+     [
+      "5",
+      7.9,
+      "regex",
+      [
+       "jessehouwing.net",
+       "pwc.com",
+       "semianalysis.com",
+       "snippets"
+      ]
+     ],
+     [
+      "30",
+      6.3,
+      "regex",
+      [
+       "jessehouwing.net",
+       "pwc.com",
+       "semianalysis.com",
+       "snippets"
+      ]
+     ],
+     [
+      "1",
+      6.17,
+      "regex",
+      [
+       "jessehouwing.net",
+       "pwc.com",
+       "semianalysis.com",
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 16.51
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev14",
+   "pred": "9.3.18",
+   "answers": [
+    "18.6"
+   ],
+   "strict": false,
+   "lenient": false,
+   "seconds": 35.2,
+   "confidence": 0.5677065480733601,
+   "sources": [
+    "https://www.postgresql.org/docs/release/9.3.18/"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 3132,
+    "completion_tokens": 91,
+    "seconds": 24.18
+   },
+   "trace": {
+    "steps": [
+     "search 12 hits @6.9s",
+     "fetched 6/6 @10.5s",
+     "followed 2 @14.4s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "PostgreSQL",
+     "attribute": "latest release version",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the latest release version of PostgreSQL?",
+      "What is the latest version of PostgreSQL?",
+      "What is the current release version of PostgreSQL?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q192490",
+     "label": "PostgreSQL",
+     "description": "free and open-source relational database management system",
+     "website": "https://www.postgresql.org"
+    },
+    "llm_answer": "19",
+    "top": [
+     [
+      "9.3.18",
+      4.95,
+      "regex",
+      [
+       "postgresql.org",
+       "snippets"
+      ]
+     ],
+     [
+      "9.1.24",
+      4.35,
+      "regex",
+      [
+       "postgresql.org"
+      ]
+     ],
+     [
+      "19",
+      3.8,
+      "llm",
+      [
+       "postgresql.org"
+      ]
+     ],
+     [
+      "8.0.0",
+      3.7,
+      "regex",
+      [
+       "postgresql.org",
+       "snippets"
+      ]
+     ],
+     [
+      "8.3.0",
+      3.7,
+      "regex",
+      [
+       "postgresql.org",
+       "snippets"
+      ]
+     ]
+    ],
+    "seconds": 35.23
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev15",
+   "pred": "3.15.0",
+   "answers": [
+    "3.15.0"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 9.8,
+   "confidence": 0.33626130259564724,
+   "sources": [
+    "https://endoflife.date/python"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 1569,
+    "completion_tokens": 96,
+    "seconds": 5.4
+   },
+   "trace": {
+    "steps": [
+     "search 2 hits @6.4s",
+     "fetched 2/2 @8.0s"
+    ],
+    "plan": {
+     "answer_type": "version",
+     "entity": "Python",
+     "attribute": "latest stable version",
+     "is_latest": true,
+     "ecosystem": "pypi",
+     "package": "",
+     "queries": [
+      "What is the latest stable version of Python?",
+      "What is the latest stable version of Python?",
+      "What is the current stable version of Python?"
+     ]
+    },
+    "wikidata": {
+     "id": "Q28865",
+     "label": "Python",
+     "description": "general-purpose programming language",
+     "website": "https://www.python.org/"
+    },
+    "llm_answer": "3.0.12",
+    "top": [
+     [
+      "3.15.0",
+      3.0,
+      "api",
+      []
+     ],
+     [
+      "1.0.0",
+      2.7,
+      "regex",
+      [
+       "dev.to",
+       "readthedocs.io"
+      ]
+     ],
+     [
+      "10.7.0",
+      2.2,
+      "regex",
+      [
+       "readthedocs.io"
+      ]
+     ]
+    ],
+    "seconds": 9.79
+   }
+  },
+  {
+   "mode": "agent",
+   "id": "dev16",
+   "pred": "888-463-6332",
+   "answers": [
+    "888-463-6332",
+    "1-888-INFO-FDA"
+   ],
+   "strict": true,
+   "lenient": true,
+   "seconds": 15.6,
+   "confidence": 0.75,
+   "sources": [
+    "https://www.fda.gov/about-fda/contact-fda",
+    "https://www.fda.gov/",
+    "https://www.fda.gov/about-fda"
+   ],
+   "usage": {
+    "calls": 2,
+    "prompt_tokens": 2648,
+    "completion_tokens": 122,
+    "seconds": 7.63
+   },
+   "trace": {
+    "steps": [
+     "search 10 hits @6.1s",
+     "fetched 6/6 @9.2s",
+     "followed 3 @11.7s"
+    ],
+    "plan": {
+     "answer_type": "phone",
+     "entity": "FDA",
+     "attribute": "General Phone Number for Consumer Inquiries",
+     "is_latest": true,
+     "ecosystem": "none",
+     "package": "",
+     "queries": [
+      "What is the FDA's general phone number for consumer inquiries?",
+      "What is the FDA's general phone number for consumer inquiries?",
+      "FDA consumer inquiries phone number 2025"
+     ]
+    },
+    "wikidata": {
+     "id": "Q204711",
+     "label": "United States Food and Drug Administration",
+     "description": "agency of the US Department of Health and Human Services",
+     "website": "https://fda.gov/"
+    },
+    "llm_answer": "1-888-INFO-FDA (1-888-463-6332)",
+    "top": [
+     [
+      "888-463-6332",
+      21.6,
+      "llm",
+      [
+       "fda.gov"
+      ]
+     ]
+    ],
+    "seconds": 15.65
+   }
+  }
+ ]
+}

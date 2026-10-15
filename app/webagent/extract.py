@@ -108,8 +108,13 @@ def find_typed(text: str, answer_type: str) -> list[tuple[str, str]]:
 def format_answer(value: str, answer_type: str) -> str:
     v = value.strip().strip('"\'').strip()
     v = re.sub(r"\s+", " ", v)
-    if answer_type == "phone" and looks_like_phone(v):
-        return format_phone(v)
+    if answer_type == "phone":
+        # "1-888-INFO-FDA (1-888-463-6332)": prefer the all-digit number.
+        nums = [p for p, _ in find_phones(v) if not re.search(r"[A-Za-z]", p)]
+        if nums:
+            return format_phone(nums[0])
+        if looks_like_phone(v):
+            return format_phone(v)
     if answer_type == "version":
         m = _VERSION.search(v)
         return m.group(1) if m else v.lstrip("vV")

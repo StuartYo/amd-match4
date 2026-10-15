@@ -192,16 +192,24 @@ def entity_domain_match(url: str, entity: str, official: str = "") -> bool:
     return bool(dom) and any(t.replace("-", "") in dom or dom in t.replace("-", "") for t in ents)
 
 
+def _vkey(v: str) -> tuple:
+    return tuple(int(x) for x in re.findall(r"\d+", v)[:4])
+
+
 def score_candidates(cands: list[Candidate], pages: list[web.Page], plan: dict) -> list[Candidate]:
     t = plan["answer_type"]
+    latest_version = t == "version" and plan.get("is_latest")
+    official = plan.get("official", "")
     qtok = set(tokens(plan["question"] + " " + plan.get("attribute", "")))
     merged: dict[str, Candidate] = {}
+    counts: Counter = Counter()
+    llm_keys: set = set()
     for c in cands:
         val = extract.format_answer(c.value, t)
         if not val or len(val) > 200:
             continue
         key = extract.grade_norm(val) if t != "phone" else extract.phone_digits(val)[-10:]
-        base = {"api": 3.0, "llm": 2.2, "tel": 1.6, "jsonld": 1.6, "regex": 0.8}.get(c.method, 0.5)
+        base = {"api": 6.0 if latest_version else 3.0, "llm": 2.2, "tel": 1.6, "jsonld": 1.6, "regex": 0.8}.get(c.method, 0.5)
         ctx_overlap = len(qtok & set(tokens(c.context))) if c.method in ("regex", "tel") else 0
         s = base + 0.35 * min(ctx_overlap, 4)
         if t == "phone" and re.search(r"\bfax\b|\btty\b|\btdd\b", c.context.lower()) and "fax" not in plan["question"].lower():
@@ -211,27 +219,45 @@ def score_candidates(cands: list[Candidate], pages: list[web.Page], plan: dict) 
             ents = [x for x in tokens(plan.get("entity", "")) if len(x) > 1]
             if not (re.search(r"version|release|\blts\b|stable|\bv\d", ctx) and (not ents or any(e in ctx for e in ents))):
                 continue  # a bare decimal (price, score) is not a version
-        if entity_domain_match(c.source, plan.get("entity", ""), plan.get("official", "")):
-            s += 1.0
-        if key in merged:
-            m = merged[key]
-            m.score += 0.5 * s
-            if s > m.score:
-                m.value, m.source = val, c.source
-            m.method = m.method if m.method == "api" else c.method if c.method in ("api", "llm") else m.method
-        else:
+        if t in ("number", "year", "date", "price") and c.method == "regex" and ctx_overlap == 0:
+            continue  # a number with none of the question's words nearby is noise
+        if entity_domain_match(c.source, plan.get("entity", ""), official):
+            s += 1.5 if official and web.registrable(web.domain_of(c.source)) == official else 1.0
+        counts[key] += 1
+        if c.method == "llm":
+            llm_keys.add(key)
+        m = merged.get(key)
+        if m is None or s > m.score:
             merged[key] = Candidate(val, c.source, c.method, c.context, s)
+    for key, c in merged.items():
+        # Repetition helps a little, but a value printed 40 times on one page is still one source.
+        c.score += 0.5 * math.log2(counts[key])
+        if key in llm_keys and c.method != "llm":
+            c.score += 1.5  # the reader picked a value the extractors also found
+            c.method += "+llm"
     out = []
     for key, c in merged.items():
         grounded_domains = set()
         for p in pages:
             if p.ok and extract.value_in_text(c.value, p.text + " " + " ".join(p.tel), t):
                 grounded_domains.add(web.registrable(web.domain_of(p.url)))
-        if c.method != "api" and not grounded_domains:
+        if not c.method.startswith("api") and not grounded_domains:
             continue  # not on any page we fetched: never answer it
         c.support = grounded_domains
         c.score += 0.6 * min(len(grounded_domains), 4)
+        if official and official in grounded_domains:
+            c.score += 1.0
         out.append(c)
+    if latest_version and out:
+        # "1.37" vs "1.37.1": the longer release of the same line wins.
+        for a in out:
+            for b in out:
+                if b is not a and b.value.startswith(a.value + ".") and b.score < a.score:
+                    b.score, a.score = a.score + 0.1, a.score - 0.5
+        # Among the candidates the question is about, the newest one gets a nudge.
+        top_vals = sorted((c for c in out if _vkey(c.value)), key=lambda c: _vkey(c.value), reverse=True)
+        if top_vals:
+            top_vals[0].score += 0.8
     out.sort(key=lambda c: -c.score)
     return out
 
@@ -243,7 +269,7 @@ def confidence(ranked: list[Candidate]) -> float:
     second = ranked[1].score if len(ranked) > 1 else 0.0
     margin = top - second
     c = 1 / (1 + math.exp(-(0.9 * margin + 0.35 * top - 2.0)))
-    if len(ranked[0].support) <= 1 and ranked[0].method != "api":
+    if len(ranked[0].support) <= 1 and not ranked[0].method.startswith("api"):
         c = min(c, 0.75)  # one page only: cap
     return max(0.05, min(c, 0.97))
 
@@ -262,13 +288,14 @@ def answer(question: str, budget_s: float | None = None) -> Result:
     t = plan["answer_type"]
 
     from concurrent.futures import ThreadPoolExecutor
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        wd_job = pool.submit(web.wikidata_entity, plan.get("entity", "")) if plan.get("entity") else None
-        hits = web.search(plan["queries"], timeout_s=min(8.0, left() - 8)) if left() > 10 else []
-        try:
-            wd = wd_job.result(timeout=max(0.5, min(3.0, left() - 8))) if wd_job else None
-        except Exception:
-            wd = None
+    pool = ThreadPoolExecutor(max_workers=1)
+    wd_job = pool.submit(web.wikidata_entity, plan.get("entity", "")) if plan.get("entity") else None
+    hits = web.search(plan["queries"][:2], timeout_s=min(8.0, left() - 8)) if left() > 10 else []
+    try:
+        wd = wd_job.result(timeout=max(0.2, min(3.0, left() - 8))) if wd_job else None
+    except Exception:
+        wd = None
+    pool.shutdown(wait=False, cancel_futures=True)
     homepage = (wd or {}).get("website", "")
     plan["official"] = web.registrable(web.domain_of(homepage)) if homepage else ""
     trace["wikidata"] = wd
@@ -307,6 +334,7 @@ def answer(question: str, budget_s: float | None = None) -> Result:
             trace["steps"].append(f"followed {len(follow)} @{time.time() - t0:.1f}s")
 
     ok_pages = [p for p in pages if p.ok]
+    trace["pages"] = [p.url for p in ok_pages]
     for p in ok_pages:
         for v, ctx in extract.find_typed(p.text, t)[:40]:
             cands.append(Candidate(v, p.url, "regex", ctx))

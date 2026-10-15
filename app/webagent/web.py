@@ -334,14 +334,20 @@ def fetch_many(urls: list[str], timeout_s: float = 8.0) -> list[Page]:
     return [j.result() if j in done else Page(url=u, error="timeout") for j, u in zip(jobs, urls)]
 
 
-def get_json(url: str, params: dict | None = None) -> dict | list | None:
+def get_json(url: str, params: dict | None = None, timeout: float = 4.0) -> dict | list | None:
+    key = url + "?" + json.dumps(params or {}, sort_keys=True)
+    cached = _cache_get("api", key)
+    if cached is not None:
+        return cached
     try:
-        with httpx.Client(headers={"User-Agent": config.API_USER_AGENT}, timeout=config.FETCH_TIMEOUT_S,
+        with httpx.Client(headers={"User-Agent": config.API_USER_AGENT}, timeout=timeout,
                           follow_redirects=True) as c:
             r = c.get(url, params=params)
             if r.status_code != 200:
                 return None
-            return r.json()
+            data = r.json()
+            _cache_put("api", key, data)
+            return data
     except Exception:
         return None
 

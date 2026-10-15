@@ -43,6 +43,8 @@ def eol_product_for(entity: str) -> str | None:
     s = _slug(entity)
     s = EOL_ALIASES.get(s, s)
     prods = _eol_products()
+    if not prods:  # list unavailable: try the slug itself
+        return s if get_json(f"https://endoflife.date/api/{s}.json") else None
     if s in prods:
         return s
     s2 = s.replace("-", "")
