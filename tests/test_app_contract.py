@@ -181,3 +181,12 @@ def test_guess_entity_fallback():
     assert agent.guess_entity("What is the USPTO's general phone number?") == "USPTO"
     assert agent.guess_entity("What is the phone number for Grand Canyon National Park?") == "Grand Canyon National Park"
     assert agent.guess_entity("what is the weather") == ""
+
+
+def test_index_call_is_a_no_op(env, monkeypatch):
+    fake = Fake("x")
+    monkeypatch.setattr(agent, "answer", fake)
+    run(["--index", "/app/corpus", "--output-dir", str(env / "o")], monkeypatch)
+    assert fake.calls == 0 and not (env / "o").exists()
+    run(["--corpus", "/app/corpus", "--query-id", "q1", "--query", "q", "--output-dir", str(env / "o")], monkeypatch)
+    assert read(env / "o" / "q1_output.json")["answer"] == "x"

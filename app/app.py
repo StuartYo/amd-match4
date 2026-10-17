@@ -190,7 +190,11 @@ def main() -> None:
     ap.add_argument("--input-dir")
     ap.add_argument("--output-dir", default=config.OUTPUT_DIR)
     ap.add_argument("--debug", action="store_true")
+    ap.add_argument("--index", nargs="?", const="", help="accepted for harnesses that index a corpus first; nothing to index")
+    ap.add_argument("--corpus")
     a, _unknown = ap.parse_known_args()  # tolerate extra flags from the harness
+    if a.index is not None and a.query is None and a.question is None:
+        return  # an "index the corpus" call (as in Match 3): a web agent has nothing to index
     out = Path(a.output_dir)
     q = a.query if a.query is not None else a.question if a.question is not None else a.question_pos
     if q is None and os.environ.get("QUERY"):

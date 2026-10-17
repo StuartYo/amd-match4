@@ -61,6 +61,10 @@ OUTPUT_DIR = _env("WA_OUTPUT_DIR", "/app/output")
 # "always answer when there is a grounded candidate".
 ABSTAIN_BELOW = _float("WA_ABSTAIN_BELOW", 0.0)
 
+# How many source URLs to list with an answer (the first is always the page the value came from).
+# If Match 4 grades the source list as an exact set, set this to 1.
+MAX_SOURCES = max(1, _int("WA_MAX_SOURCES", 3))
+
 # Optional on-disk cache for search results and pages. Development only: it
 # keeps repeated evaluation runs from hammering search engines. Never set it
 # in the challenge image.

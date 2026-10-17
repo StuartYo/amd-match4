@@ -392,7 +392,7 @@ def answer(question: str, budget_s: float | None = None) -> Result:
         best = ranked[0]
         srcs = [best.source] if not best.source.startswith("search://") else []
         for p in ok_pages:
-            if p.url not in srcs and web.registrable(web.domain_of(p.url)) in best.support and len(srcs) < 3:
+            if p.url not in srcs and web.registrable(web.domain_of(p.url)) in best.support and len(srcs) < config.MAX_SOURCES:
                 if extract.value_in_text(best.value, p.text, t):
                     srcs.append(p.url)
         res = Result(best.value, conf, srcs, t, trace, usage)
