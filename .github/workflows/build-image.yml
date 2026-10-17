@@ -1,13 +1,17 @@
-# Manual only: builds the challenge image and pushes it to GHCR.
-# After the first push, set the package visibility to Public in GitHub settings.
+# Builds the challenge image and pushes it to GHCR as ghcr.io/<owner>/amd-match4.
+# Runs on every push to main and can be started by hand with a custom tag.
+# The package stays private until its owner switches visibility in GitHub package settings
+# (Packages -> amd-match4 -> Package settings -> Change visibility).
 # Do not write the resulting image reference into any public file.
 name: build-image
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       tag:
-        description: image tag
-        required: true
+        description: extra image tag
+        required: false
         default: v1
 permissions:
   contents: read
@@ -15,6 +19,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - name: Free disk space (base image is ~20 GB compressed)
         run: |
@@ -29,8 +34,13 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
       - name: Build (no squash, linux/amd64)
         run: |
-          IMG=ghcr.io/$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')/wa4:${{ inputs.tag }}
-          docker build --platform linux/amd64 -t "$IMG" .
-          docker run --rm --entrypoint python3 "$IMG" -c "import torch;assert torch.version.hip, torch.__version__;print(torch.__version__)"
-          docker image inspect "$IMG" --format '{{.Size}}' | awk '{printf "uncompressed size: %.1f GiB\n", $1/1073741824}'
-          docker push "$IMG"
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          IMG=ghcr.io/$OWNER/amd-match4
+          SHORT=$(echo "${{ github.sha }}" | cut -c1-7)
+          docker build --platform linux/amd64 -t "$IMG:$SHORT" -t "$IMG:latest" .
+          docker run --rm --entrypoint python3 "$IMG:$SHORT" -c "import torch;assert torch.version.hip, torch.__version__;print(torch.__version__)"
+          docker image inspect "$IMG:$SHORT" --format '{{.Size}}' | awk '{printf "uncompressed size: %.1f GiB\n", $1/1073741824}'
+          docker push "$IMG:$SHORT"
+          docker push "$IMG:latest"
+          EXTRA="${{ inputs.tag }}"
+          if [ -n "$EXTRA" ]; then docker tag "$IMG:$SHORT" "$IMG:$EXTRA" && docker push "$IMG:$EXTRA"; fi
