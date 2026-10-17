@@ -1,12 +1,12 @@
 # Builds the challenge image and pushes it to GHCR as ghcr.io/<owner>/amd-match4.
-# Runs on every push to main and can be started by hand with a custom tag.
+# Runs on every push to main or master and can be started by hand with a custom tag.
 # The package stays private until its owner switches visibility in GitHub package settings
 # (Packages -> amd-match4 -> Package settings -> Change visibility).
 # Do not write the resulting image reference into any public file.
 name: build-image
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
     inputs:
       tag:
