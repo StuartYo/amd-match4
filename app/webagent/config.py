@@ -45,6 +45,11 @@ MAX_PAGES = _int("WA_MAX_PAGES", 6)
 MAX_FOLLOW = _int("WA_MAX_FOLLOW", 3)
 IO_WORKERS = _int("WA_IO_WORKERS", 4)
 
+# Hard wall-clock cap for one app.py process (0 = budget + 6 s).
+HARD_DEADLINE_S = _float("WA_HARD_DEADLINE_S", 0.0)
+# How long app.py waits for the resident server while the container is still loading weights.
+SERVER_WAIT_S = _float("WA_SERVER_WAIT_S", 540.0)
+
 # Local server that keeps the model loaded between per-question processes.
 SERVER_HOST = _env("WA_SERVER_HOST", "127.0.0.1")
 SERVER_PORT = _int("WA_SERVER_PORT", 8765)

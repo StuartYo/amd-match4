@@ -57,6 +57,25 @@ Design rules:
 The official Match 4 input/output contract had not been published when this was written;
 `app.py` accepts the shapes used in Matches 2 and 3 and is a few lines to adapt.
 
+## Reliability rules
+
+- `app.py` writes a valid empty answer file before doing anything, and ends the process at a
+  hard deadline (`WA_HARD_DEADLINE_S`, default budget + 3 s) even if a network call or the
+  model hangs.
+- The resident server opens its port at once; `/health` reports `ok: false` while weights load.
+  A question that arrives early waits (up to `WA_SERVER_WAIT_S`) instead of loading a second
+  copy of the model. A request to the server that fails is never retried in-process.
+- If the model cannot be loaded, the server still answers with the deterministic extractors
+  (typed regexes, `tel:`/JSON-LD, package registries, a rule-based entity guess) and marks the
+  failure in `/health`. The grounding check and the confidence score do not depend on the model.
+- The weight download retries four times before the server starts.
+- Input forms accepted: `--query-id/--query`, `--question`, a positional question, stdin,
+  `QUERY`/`QUERY_ID`, `--input FILE` (one object or a list), `--input-dir DIR`. Unknown flags are ignored.
+- Abstention: by default the agent answers whenever a grounded candidate exists
+  (`WA_ABSTAIN_BELOW=0`). On the 32 agent answers in `eval/results/`, all four answers below
+  confidence 0.5 were wrong and none of the correct ones were below 0.75, so a threshold of 0.5
+  is available if the spec turns out to penalise wrong answers more than empty ones.
+
 ## Evaluation
 
 `eval/questions_dev.jsonl` (16) and `eval/questions_holdout.jsonl` (8): software versions,

@@ -149,18 +149,31 @@ def parse_json(text: str) -> dict | None:
 
 
 _LLM: BaseLLM | None = None
+_LLM_ERROR: str | None = None
 _LLM_LOCK = threading.Lock()
 
 
 def get_llm() -> BaseLLM:
-    global _LLM
+    """Load the model once. If loading fails, remember it: every later call raises at once
+    (the agent then runs on its deterministic extractors) instead of retrying a slow load."""
+    global _LLM, _LLM_ERROR
     with _LLM_LOCK:
         if _LLM is None:
-            if config.LLM_BACKEND == "openai":
-                _LLM = OpenAICompatLLM(config.LLM_BASE_URL, config.LLM_MODEL)
-            else:
-                _LLM = TransformersLLM(config.LLM_MODEL)
+            if _LLM_ERROR:
+                raise RuntimeError("model unavailable: " + _LLM_ERROR)
+            try:
+                if config.LLM_BACKEND == "openai":
+                    _LLM = OpenAICompatLLM(config.LLM_BASE_URL, config.LLM_MODEL)
+                else:
+                    _LLM = TransformersLLM(config.LLM_MODEL)
+            except Exception as e:
+                _LLM_ERROR = f"{type(e).__name__}: {e}"[:300]
+                raise
         return _LLM
+
+
+def llm_error() -> str | None:
+    return _LLM_ERROR
 
 
 def set_llm(llm: BaseLLM | None) -> None:

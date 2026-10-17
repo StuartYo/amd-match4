@@ -80,6 +80,24 @@ Return ONLY a JSON object with these keys:
 "queries": 2 short web search queries that would find the answer on an official page"""
 
 
+_CAP = r"[A-Z][\w.+#&'-]*"
+_ENTITY_RE = re.compile(rf"\b(?:of|for|at|does|is|did|has|about|from)\s+(?:the\s+)?((?:{_CAP})(?:\s+(?:of\s+the\s+|of\s+|and\s+)?{_CAP})*)")
+_ENTITY_DROP = {"Python", "Java", "What", "Who", "Which", "When", "How"}
+
+
+def guess_entity(q: str) -> str:
+    """Rule-based fallback for the entity when the model returned none (or is unavailable):
+    the first capitalised phrase after of/for/at/..., e.g. 'Node.js', 'Kelly Ortberg's company'."""
+    for m in _ENTITY_RE.finditer(q):
+        e = re.sub(r"['’]s\b", "", m.group(1).strip())
+        if " of " in e and e.split()[0].isupper() and len(e.split()[0]) <= 4:
+            e = e.rsplit(" of ", 1)[1]  # "CEO of Nike" -> "Nike"
+        words = [w for w in e.split() if w not in _ENTITY_DROP or len(e.split()) == 1]
+        if words:
+            return " ".join(words)
+    return ""
+
+
 def plan_question(q: str, usage: Usage) -> dict:
     plan = {"question": q, "answer_type": rule_type(q), "entity": "", "attribute": "",
             "is_latest": any(w in q.lower() for w in ("latest", "current", "newest", "most recent")),
@@ -98,6 +116,8 @@ def plan_question(q: str, usage: Usage) -> dict:
             plan[k] = data[k].strip()
     if isinstance(data.get("is_latest"), bool):
         plan["is_latest"] = plan["is_latest"] or data["is_latest"]
+    if not plan["entity"]:
+        plan["entity"] = guess_entity(q)
     qs = [x for x in data.get("queries", []) if isinstance(x, str) and x.strip()] if isinstance(data.get("queries"), list) else []
     plan["queries"] = ([q] + qs)[:3]
     return plan
